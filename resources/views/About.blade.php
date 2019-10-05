@@ -3,11 +3,11 @@
 @section('content')
     <h1>Pagina About</h1>
 
-    <ul>
-        @forelse($usuarios as $usuario)
-        <li>{{$usuario->UsuNombre}}</li>
-        @empty
-            <li>hola</li>
-        @endforelse
-    </ul>
+    <div class="row">
+
+       <img src="../Image/Fondo_inicio.jpg">
+
+        </div>
+
+    </div>
 @endsection
