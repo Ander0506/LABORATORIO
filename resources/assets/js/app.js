@@ -5,7 +5,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+require('./jquery-3.3.1.min');
 require('./bootstrap');
+require('./mdb.min');
+require('./popper.min');
+require('./fontawesome_all');
 
 window.Vue = require('vue');
 
