@@ -1,24 +1,11 @@
 @extends('Master')
 
 @section('content')
-    <h1>Pagina Home</h1>
-    <h3>Usuarios</h3>
+    <div class="view Bg-Home vh-100">
+        <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="img-fluid" alt="placeholder">
+        <div class="mask flex-center rgba-black-strong">
+        </div>
+    </div>
 
-    <ul>
-        @forelse($usuarios as $usuario)
-            <li>{{$usuario['nombre']}}</li>
-        @empty
-            <li>No hay usuarios</li>
-        @endforelse
-    </ul>
-
-    <h3>Laboratorios</h3>
-
-    <ul>
-        @forelse($laboratorios as $laboratorio)
-            <li>{{$laboratorio['nombre']}}</li>
-        @empty
-            <li>No hay usuarios</li>
-        @endforelse
-    </ul>
+    
 @endsection
