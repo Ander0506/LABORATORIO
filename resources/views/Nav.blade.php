@@ -18,7 +18,7 @@
                 <a class="nav-link" href="#">LABORATORIOS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTÁCTENOS</a>
+                <a class="nav-link" href="#">CONTÁCTANOS</a>
             </li>
             <li class="nav-item dropdown">
                 <!--

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>@yield('title', 'Laboratorio')</title>
 </head>
-<body>
+<body">
     @include('Nav')
     @yield('content')
 
