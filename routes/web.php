@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController')->name('home');
 Route::get('/about','AboutController');
+Route::get('/laboratorio','LaboratorioController@index');
 // Route::view('/login', 'Login')->name('login');
 // Route::view('/about', 'About')->name('about');
 
