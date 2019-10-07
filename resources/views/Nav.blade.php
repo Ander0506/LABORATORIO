@@ -8,17 +8,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">INICIO</a>
+            <li class="nav-item {{setAction('home')}}">
+                <a class="nav-link" href="{{route('home')}}">INICIO</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">CONÓCENOS</a>
+            <li class="nav-item {{setAction('about')}}">
+                <a class="nav-link" href="{{route('about')}}">CONÓCENOS</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">LABORATORIOS</a>
+            <li class="nav-item {{setAction('laboratorio')}}">
+                <a class="nav-link" href="{{route('laboratorio')}}">LABORATORIOS</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">CONTÁCTANOS</a>
+            <li class="nav-item {{setAction('cantacto')}}">
+                <a class="nav-link" href="{{route('cantacto')}}">CONTÁCTANOS</a>
             </li>
             <li class="nav-item dropdown">
                 <!--

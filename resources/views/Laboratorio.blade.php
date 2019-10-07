@@ -52,7 +52,9 @@
 
                         <!--Card image-->
                         <div class="view view-cascade">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg" class="card-img-top">
+                            {{--<img src="{{asset(hexdec (base64_encode($laboratorio->LabImg)))}}" class="card-img-top">--}}
+                            <img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">
+
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>

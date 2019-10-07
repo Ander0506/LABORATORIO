@@ -18,9 +18,10 @@
 
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show mt-4 active" id="usuario" role="tabpanel" aria-labelledby="home-tab"><form action="#!">
+                    <div class="tab-pane fade show mt-4 active" id="usuario" role="tabpanel" aria-labelledby="home-tab">
 
-
+                        <form action="#!">
+                            @csrf
                             <!-- Email -->
                             <input type="email" name="emailUsuario" class="form-control mb-4" placeholder="Correo Electrónico">
 
@@ -36,10 +37,11 @@
 
                         </form>
                     </div>
-                    <div class="tab-pane fade mt-4" id="laboratorio" role="tabpanel" aria-labelledby="profile-tab"><form action="#!">
+                    <div class="tab-pane fade mt-4" id="laboratorio" role="tabpanel" aria-labelledby="profile-tab">
 
+                        <form action="#!">
+                            @csrf
 
-                            <!-- Email -->
                             <input type="text" name="NITLaboratorio" class="form-control mb-4" placeholder="NIT">
 
                             <!-- Password -->
