@@ -16,6 +16,7 @@ Route::get('/about','AboutController')->name('about');
 Route::view('/login', 'Login')->name('login');
 Route::get('/laboratorio','LaboratorioController@index')->name('laboratorio');
 Route::get('/contacto','ContactoController@index')->name('cantacto');
+Route::get('/registropublico','RegistroPublicoController@index')->name('cantacto');
 // Route::view('/about', 'About')->name('about');
 
 

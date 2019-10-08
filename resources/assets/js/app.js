@@ -10,7 +10,9 @@ require('./bootstrap');
 require('./mdb.min');
 require('./popper.min');
 require('./fontawesome_all');
-
+require('./jquery.bootstrap');
+require('./material-bootstrap-wizard');
+require('./jquery.validate.min');
 window.Vue = require('vue');
 
 /**
