@@ -1,7 +1,7 @@
 @extends('Master')
 
 @section('content')
-    <div class="image-container set-full-height" style="background-image: url('{{asset('Images/Fondo_inicio.jpg')}}')">
+    <div class="set-full-height">
         <!--   Big container   -->
         <div class="container">
             <div class="row justify-content-center">
