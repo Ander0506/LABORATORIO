@@ -4,7 +4,7 @@
     <div class="image-container set-full-height" style="background-image: url('{{asset('Images/Fondo_inicio.jpg')}}')">
         <!--   Big container   -->
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!--      Wizard container        -->
                     <div class="wizard-container">
@@ -103,16 +103,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wizard-footer">
-                                    <div class="pull-right ">
-                                        <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finish' />
-                                    </div>
+                                <div class="row">
+                                    <div class="col-6"></div>
+                                    <div class="wizard-footer col-6 text-right">
 
-                                    <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                        <div class="pull-left d-md-inline-block">
+                                            <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
+                                        </div>
+
+                                        <div class="pull-right d-md-inline-block">
+                                            <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Continuar' />
+                                            <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finalizar' />
+                                        </div>
+
+                                        <div class="clearfix"></div>
                                     </div>
-                                    <div class="clearfix"></div>
                                 </div>
                             </form>
                         </div>
