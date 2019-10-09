@@ -9,7 +9,8 @@
                     <!--      Wizard container        -->
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <form action="" method="">
+                            <form action="" method="post" >
+                                @csrf
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
 
                                 <div class="wizard-header">
@@ -103,6 +104,13 @@
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="wizard-footer">
+                                    <div class="pull-right ">
+                                        <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
+                                        <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finish' />
+                                    </div>
+=======
                                 <div class="row">
                                     <div class="col-6"></div>
                                     <div class="wizard-footer col-6 text-right">
@@ -115,6 +123,7 @@
                                             <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Continuar' />
                                             <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finalizar' />
                                         </div>
+>>>>>>> 55bdbd2245eaa2ea4bfa802c535563f5a85368e3
 
                                         <div class="clearfix"></div>
                                     </div>
