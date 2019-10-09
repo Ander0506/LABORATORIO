@@ -86,42 +86,36 @@
                                     </div>
                                     <div class="tab-pane" id="address">
                                         <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class="info-text"> Are you living in a nice area? </h4>
-                                            </div>
-                                            <div class="col-sm-7 col-sm-offset-1">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Street Name</label>
-                                                    <input type="text" class="form-control">
+                                            <div class="col-sm-6">
+                                                <div class="">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Direccion <small>(Requerido)</small></label>
+                                                        <input name="LabDireccion" type="text" class="form-control" required>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Street Number</label>
-                                                    <input type="text" class="form-control">
+                                            <div class="col-sm-6">
+                                                <div class="">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Telefono <small>(Requerido)</small></label>
+                                                        <input name="LabTelefono" type="text" class="form-control" required>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5 col-sm-offset-1">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">City</label>
-                                                    <input type="text" class="form-control">
+                                            <div class="col-sm-6">
+                                                <div class="">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Email <small>(Requerido)</small></label>
+                                                        <input name="LabEmail" type="email" class="form-control" required>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Country</label>
-                                                    <select name="country" class="form-control">
-                                                        <option disabled="" selected=""></option>
-                                                        <option value="Afghanistan"> Afghanistan </option>
-                                                        <option value="Albania"> Albania </option>
-                                                        <option value="Algeria"> Algeria </option>
-                                                        <option value="American Samoa"> American Samoa </option>
-                                                        <option value="Andorra"> Andorra </option>
-                                                        <option value="Angola"> Angola </option>
-                                                        <option value="Anguilla"> Anguilla </option>
-                                                        <option value="Antarctica"> Antarctica </option>
-                                                        <option value="...">...</option>
-                                                    </select>
+                                            <div class="col-sm-6">
+                                                <div class="">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Certificado? <small>(Requerido)</small></label>
+                                                        <input name="LabCertificacion" type="checkbox" class="form-control" required>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
