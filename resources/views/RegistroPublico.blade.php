@@ -79,24 +79,24 @@
                                             <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="">
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Contraseña <small>(Obligatorio)</small></label>
-                                                        <input name="UsuPass" type="text" class="form-control" required>
+                                                        <label class="control-label">Direccion <small>(Obligatorio)</small></label>
+                                                        <input name="UsuDireccion" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="">
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Contraseña <small>(Obligatorio)</small></label>
-                                                        <input name="UsuPass" type="text" class="form-control" required>
+                                                        <label class="control-label">Telefono <small>(Obligatorio)</small></label>
+                                                        <input name="UsuTelefono" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="">
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Contraseña <small>(Obligatorio)</small></label>
-                                                        <input name="UsuPass" type="text" class="form-control" required>
+                                                        <label class="control-label">Email <small>(Obligatorio)</small></label>
+                                                        <input name="UsuEmail" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
