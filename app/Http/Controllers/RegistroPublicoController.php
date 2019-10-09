@@ -26,6 +26,6 @@ class RegistroPublicoController extends Controller
             'UsuPass' => $request->get('UsuPass')
         ));
         $usuario->save();
-        return redirect('/home');
+        return 'Datos guardados';
     }
 }
