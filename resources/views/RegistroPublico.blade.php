@@ -1,14 +1,14 @@
 @extends('Master')
 
 @section('content')
-    <div class="set-full-height">
+    <div class="set-full-height white vh-88">
         <!--   Big container   -->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-8 col-sm-offset-2">
+                <div class="col-sm-6">
                     <!--      Wizard container        -->
                     <div class="wizard-container">
-                        <div class="card wizard-card" data-color="green" id="wizardProfile">
+                        <div class="card wizard-card z-depth-0" data-color="green" id="wizardProfile">
                             <form method="POST" action="{{route('registropublico')}}">
                                 @csrf
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
@@ -106,8 +106,8 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-6"></div>
-                                    <div class="wizard-footer col-6 text-right">
+                                    <div class="col-3"></div>
+                                    <div class="wizard-footer col-9 text-right">
 
                                         <div class="pull-left d-md-inline-block">
                                             <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
@@ -124,6 +124,9 @@
                             </form>
                         </div>
                     </div> <!-- wizard container -->
+                </div>
+                <div class="col-sm-6">
+                    <img src="{{asset('Images/Img_Registro_Usu.png')}}" alt="" class="img-fluid">
                 </div>
             </div><!-- end row -->
         </div> <!--  big container -->
