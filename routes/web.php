@@ -19,7 +19,7 @@ Route::get('/contacto','ContactoController@index')->name('cantacto');
 Route::get('/registropublico','RegistroPublicoController@index')->name('registropublico');
 Route::post('/registropublico', 'RegistroPublicoController@store')->name('registropublico');
 Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
-Route::get('/registrolab','RegistroLabController@store')->name('registrolab');
+Route::get('/gestion','GestionController@index')->name('gestion');
 // Route::view('/about', 'About')->name('about');
 
 
