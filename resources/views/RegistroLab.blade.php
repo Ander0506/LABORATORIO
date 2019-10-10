@@ -3,14 +3,14 @@
 @section('content')
     <div class="image-container set-full-height" style="background-image: url('assets/img/wizard-profile.jpg')">
 
-        <!--   Big container   -->
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!--      Wizard container        -->
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <form action="" method="">
+                            <form method="POST" action="{{route('registrolab')}}">
+                            @csrf
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
 
                                 <div class="wizard-header">
@@ -29,7 +29,7 @@
                                 <div class="tab-content">
                                     <div class="tab-pane" id="about">
                                         <div class="row">
-                                            <div class="col-sm-4 col-sm-offset-1">
+                                            <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="picture-container">
                                                     <div class="picture">
                                                         <img src="assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
@@ -52,11 +52,21 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="">
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Descripcion <small>(Requerido)</small></label>
                                                         <textarea name="LabDesc"  class="form-control" required>
+
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Certificaciones <small>(Requerido)</small></label>
+                                                        <textarea name="LabCertificacion"  class="form-control" required>
 
                                                         </textarea>
                                                     </div>
@@ -110,25 +120,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <div class="">
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Certificado? <small>(Requerido)</small></label>
-                                                        <input name="LabCertificacion" type="checkbox" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="wizard-footer">
                                     <div class="pull-right">
-                                        <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finish' />
+                                        <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Siguiente' />
+                                        <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finalizar' />
                                     </div>
 
                                     <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Anterior' />
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -139,10 +142,5 @@
             </div><!-- end row -->
         </div> <!--  big container -->
 
-        <div class="footer">
-            <div class="container text-center">
-                Made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>. Free download <a href="http://www.creative-tim.com/product/bootstrap-wizard">here.</a>
-            </div>
-        </div>
     </div>
 @endsection

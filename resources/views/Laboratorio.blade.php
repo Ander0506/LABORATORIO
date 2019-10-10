@@ -12,7 +12,7 @@
 
                 <!-- Featured image -->
                 <div class="view overlay">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
+                    <img src="https://static.iris.net.co/dinero/upload/images/2017/8/3/248281_1.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
                     <a>
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -29,9 +29,6 @@
                 <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam
                     rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                     dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-
-                <a class="btn btn-success">Read more</a>
-
             </div>
             <!-- Grid column -->
 
@@ -41,7 +38,13 @@
     </div>
     <!-- News jumbotron -->
     @if ($laboratorios->isEmpty())
-        <div>NO HAY LABORATORIOS DISPONIBLES</div>
+        <DIV CLASS="justify-content-center">
+            <CENTER>
+                <div class="alert alert-danger col-sm-6 " role="alert">
+                    <CENTER><STRONG>NO HAY LABORATORIOS DISPONIBLES</STRONG></CENTER>
+                </div>
+            </CENTER>
+        </DIV>
         @else
 
             <div class="row">

@@ -29,19 +29,19 @@
                                 <div class="tab-content">
                                     <div class="tab-pane" id="about">
                                         <div class="row">
-                                            <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12">
+                                            <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                                                 <div class="">
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Nombres <small>(Obligatorio)</small></label>
+                                                        <label class="control-label">Nombres o Razon Social <small>(Obligatorio)</small></label>
                                                         <input name="UsuNombre" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12">
+                                            <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12">
                                                 <div class="">
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Apellido</label>
-                                                        <input name="UsuApellido" type="text" class="form-control" >
+                                                        <label class="control-label">Cargo <small>(Obligatorio)</small></label>
+                                                        <input name="UsuCargo" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
