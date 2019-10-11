@@ -20,10 +20,10 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show mt-4 active" id="usuario" role="tabpanel" aria-labelledby="home-tab">
 
-                        <form action="#!">
+                        <form method="POST" action="">
                             @csrf
                             <!-- Email -->
-                            <input type="email" name="emailUsuario" class="form-control mb-4" placeholder="Correo Electrónico">
+                            <input type="text" name="UsuUsuario" class="form-control mb-4" placeholder="Correo Electrónico">
 
                             <!-- Password -->
                             <input type="password" name="passwordUsuario" class="form-control mb-4" placeholder="Contraseña">
@@ -39,13 +39,13 @@
                     </div>
                     <div class="tab-pane fade mt-4" id="laboratorio" role="tabpanel" aria-labelledby="profile-tab">
 
-                        <form action="#!">
+                        <form method="POST" action="">
                             @csrf
 
-                            <input type="text" name="NITLaboratorio" class="form-control mb-4" placeholder="NIT">
+                            <input type="text" name="LabUsuario" class="form-control mb-4" placeholder="Usuario">
 
                             <!-- Password -->
-                            <input type="password" name="passwordLaboratorio" class="form-control mb-4" placeholder="Contraseña">
+                            <input type="password" name="LabPass" class="form-control mb-4" placeholder="Contraseña">
 
                             <!-- Sign in button -->
                             <button class="btn btn-info btn-block my-4" type="submit">Iniciar sesión</button>

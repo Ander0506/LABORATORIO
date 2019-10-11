@@ -5,10 +5,10 @@
         <table class="table table-striped col-sm-8" style="border: 2px solid deepskyblue">
             <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Solicitante</th>
+                <th scope="col">Analisis</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Resultado</th>
             </tr>
             </thead>
             <tbody>
@@ -17,18 +17,6 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
             </tr>
             </tbody>
         </table>

@@ -28,4 +28,11 @@ class RegistroPublicoController extends Controller
         $usuario->save();
         return 'Datos guardados';
     }
+
+    public function login(Request $request)
+    {
+        $usuario = Usuario::where('UsuUsuario', $request->get('UsuUsuario'))->get();
+         return $usuario;
+
+    }
 }

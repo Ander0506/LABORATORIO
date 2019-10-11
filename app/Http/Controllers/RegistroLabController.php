@@ -31,4 +31,11 @@ class RegistroLabController extends Controller
         $laboratorio->save();
         return 'Datos guardados';
     }
+
+    public function login(Request $request)
+    {
+        $laboratorio = Laboratorio::where('LabUsuario', $request->get('LabUsuario'))->get();
+        return  view('gestion');
+
+    }
 }
