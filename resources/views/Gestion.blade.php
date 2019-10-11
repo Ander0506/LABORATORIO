@@ -18,15 +18,17 @@
                 <th scope="col">Analisis</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Resultado</th>
+                <th scope="col">Actualizar</th>
             </tr>
             </thead>
             <tbody>
             @foreach($usuariolaboratorios as $usuariolaboratorio)
                 <tr>
-                    <th>{!! $usuariolaboratorio -> UsuCodigo !!}</th>
-                    <th>{!! $usuariolaboratorio -> AnaCodigo !!}</th>
+                    <th>{!! $usuariolaboratorio -> UsuNombre !!}</th>
+                    <th>{!! $usuariolaboratorio -> AnaDescripcion !!}</th>
                     <th>{!! $usuariolaboratorio -> Estado !!}</th>
                     <th>{!! $usuariolaboratorio -> Resultado !!}</th>
+                    <th>actualizar</th>
                 </tr>
             @endforeach
             </tbody>
