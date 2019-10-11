@@ -23,6 +23,7 @@ Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 //Route::post('/login','RegistroLabController@login')->name('loglab');
 Route::get('/gestion','GestionController@index')->name('gestion');
+Route::post('/gestion/{key}','GestionController@update')->name('gestion');
 // Route::view('/about', 'About')->name('about');
 
 

@@ -23,4 +23,8 @@ class GestionController extends Controller
         return  view('Gestion')->with('usuariolaboratorios',$usuariolaboratorios);
     }
 
+    public function update($key){
+        
+    }
+
 }

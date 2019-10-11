@@ -28,13 +28,55 @@
                     <th>{!! $usuariolaboratorio -> AnaDescripcion !!}</th>
                     <th>{!! $usuariolaboratorio -> Estado !!}</th>
                     <th>{!! $usuariolaboratorio -> Resultado !!}</th>
-                    <th>actualizar</th>
+                    <th><a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="{{'#modalLoginForm'.$usuariolaboratorio -> UsuLabKey}}">Actualizar</a></th>
+                    <div class="modal fade" id="{{'modalLoginForm'.$usuariolaboratorio -> UsuLabKey}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Actualizar Registro</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form method="POST" action="{{url('gestion/'.$usuariolaboratorio -> UsuLabKey)}}">
+                                    @csrf
+                                    <div class="modal-body mx-3">
+                                        <select class="browser-default custom-select">
+                                            <option selected>En Espera</option>
+                                            <option value="1">Muestra Entregada</option>
+                                            <option value="2">En Analisis</option>
+                                            <option value="3">Analisis Finalizado</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                       aria-describedby="inputGroupFileAddon01">
+                                                <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-default">Actualizar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </tr>
             @endforeach
             </tbody>
         </table>
         @ENDIF
     </DIV>
+
+
 
 
 @endsection
