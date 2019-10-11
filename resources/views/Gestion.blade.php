@@ -2,6 +2,15 @@
 
 @section('content')
     <DIV CLASS="row justify-content-center" STYLE="MARGIN-top:10%;">
+        @if ($usuariolaboratorios->isEmpty())
+            <DIV CLASS="justify-content-center">
+                <CENTER>
+                    <div class="alert alert-danger col-sm-6 " role="alert">
+                        <CENTER><STRONG>NO HAY ANALISIS DISPONIBLES</STRONG></CENTER>
+                    </div>
+                </CENTER>
+            </DIV>
+        @else
         <table class="table table-striped col-sm-8" style="border: 2px solid deepskyblue">
             <thead>
             <tr>
@@ -12,14 +21,17 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
+            @foreach($usuariolaboratorios as $usuariolaboratorio)
+                <tr>
+                    <th>{!! $usuariolaboratorio -> UsuCodigo !!}</th>
+                    <th>{!! $usuariolaboratorio -> AnaCodigo !!}</th>
+                    <th>{!! $usuariolaboratorio -> Estado !!}</th>
+                    <th>{!! $usuariolaboratorio -> Resultado !!}</th>
+                </tr>
+            @endforeach
             </tbody>
         </table>
+        @ENDIF
     </DIV>
 
 
