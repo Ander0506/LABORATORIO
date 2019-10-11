@@ -1,14 +1,14 @@
 @extends('Master')
 
 @section('content')
-    <div class="set-full-height white vh-88">
+    <div class="set-full-height vh-88 white">
         <!--   Big container   -->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-6">
+                <div class="col-sm-6 vh-88 align-content-center d-grid">
                     <!--      Wizard container        -->
                     <div class="wizard-container">
-                        <div class="card wizard-card z-depth-0" data-color="green" id="wizardProfile">
+                        <div class="card wizard-card z-depth-0 vh-60" data-color="green" id="wizardProfile">
                             <form method="POST" action="{{route('registropublico')}}">
                                 @csrf
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
@@ -26,7 +26,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="tab-content">
+                                <div class="tab-content mt-3">
                                     <div class="tab-pane" id="about">
                                         <div class="row">
                                             <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
@@ -110,11 +110,11 @@
                                     <div class="wizard-footer col-9 text-right">
 
                                         <div class="pull-left d-md-inline-block">
-                                            <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
+                                            <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Anterior' />
                                         </div>
 
                                         <div class="pull-right d-md-inline-block">
-                                            <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Continuar' />
+                                            <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Siguiente' />
                                             <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finalizar' />
                                         </div>
 
@@ -125,7 +125,7 @@
                         </div>
                     </div> <!-- wizard container -->
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 vh-88 align-content-center d-grid">
                     <img src="{{asset('Images/Img_Registro_Usu.png')}}" alt="" class="img-fluid">
                 </div>
             </div><!-- end row -->

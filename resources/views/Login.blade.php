@@ -1,8 +1,8 @@
 @extends('Master')
 
 @section('content')
-    <div class="row justify-content-center Content-Home d-table m-auto">
-        <div class="col-4 align-middle d-table-cell">
+    <div class="row justify-content-center Content-Home">
+        <div class="col-4 d-grid align-content-center">
             <div class="text-center border border-light p-5 card z-depth-1">
             <p class="h4 mb-4">Inicio de sesión</p>
 
@@ -32,7 +32,7 @@
                             <button class="btn btn-info btn-block my-4" type="submit">Iniciar sesión</button>
 
                             <p>¿Aún no tienes cuenta?
-                                <a href="">Regístrate!</a>
+                                <a href="{{route('registropublico')}}">Regístrate!</a>
                             </p>
 
                         </form>
