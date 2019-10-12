@@ -22,7 +22,7 @@ Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
 //Route::post('/login', 'RegistroPublicoController@login')->name('logusuario');
 //Route::post('/login','RegistroLabController@login')->name('loglab');
 // Route::view('/about', 'About')->name('about');
-
+Route::get('/gestionusuario','GestionUsuarioController@index')->name('gestionusuario');
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 Route::post('/gestion/{key}','GestionController@update')->name('gestion');
 Route::post('/login/{id?}', 'LoginController@autentication');
