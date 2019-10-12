@@ -42,7 +42,7 @@
                                         Analisis Finalizado
                                 @endif
                         </td>
-                        <td class="pt-3-half" contenteditable="true"><a href="">Click</a></td>
+                        <td><a href="{{ asset($usuariolaboratorio -> Resultado) }}" target="_blank">Click</a></td>
                     </tr>
                     @endforeach
                     <!-- This is our clonable table line -->

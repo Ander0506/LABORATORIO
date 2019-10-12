@@ -11,7 +11,7 @@
                         <DIV CLASS="justify-content-center">
                             <CENTER>
                                 <div class="alert alert-danger col-sm-6 " role="alert">
-                                    <CENTER><STRONG>LISTADO DE ANALISIS</STRONG></CENTER>
+                                    <CENTER><STRONG>NO HAY ANALISIS EN ESTE MOMENTO</STRONG></CENTER>
                                 </div>
                             </CENTER>
                         </DIV>
