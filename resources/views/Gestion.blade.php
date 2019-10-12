@@ -39,14 +39,13 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form method="POST" action="{{url('gestion/'.$usuariolaboratorio -> UsuLabKey)}}">
+                                <form method="POST" action="{{url('gestion',[$usuariolaboratorio -> UsuLabKey])}}">
                                     @csrf
                                     <div class="modal-body mx-3">
-                                        <select class="browser-default custom-select">
-                                            <option selected>En Espera</option>
-                                            <option value="1">Muestra Entregada</option>
-                                            <option value="2">En Analisis</option>
-                                            <option value="3">Analisis Finalizado</option>
+                                        <select class="browser-default custom-select" name="Estado">
+                                            <option value=1>Muestra Entregada</option>
+                                            <option value=2>En Analisis</option>
+                                            <option value=3>Analisis Finalizado</option>
                                         </select>
                                         <br>
                                         <br>
@@ -55,8 +54,7 @@
                                                 <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
                                             </div>
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                                       aria-describedby="inputGroupFileAddon01">
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" >
                                                 <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
                                             </div>
                                         </div>

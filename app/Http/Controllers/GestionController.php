@@ -23,8 +23,15 @@ class GestionController extends Controller
         return  view('Gestion')->with('usuariolaboratorios',$usuariolaboratorios);
     }
 
-    public function update($key){
-        
+    public function update($key,request $request){
+        DB::table('usuarioLaboratorio')
+            ->where('UsuLabKey', $key)
+            ->update(['Estado' => $request->get('Estado')]);
+        DB::table('usuarioLaboratorio')
+            ->where('UsuLabKey', $key)
+            ->update(['Resultado' => $request->get('Resultado')]);
+            return $this->index();
+
     }
 
 }
