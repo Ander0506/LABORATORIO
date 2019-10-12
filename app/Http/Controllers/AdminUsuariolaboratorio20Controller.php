@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminUsuariolaboratorio18Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminUsuariolaboratorio20Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
-			$this->limit = "20";
-			$this->orderby = ",desc";
+			$this->limit = "30";
+			$this->orderby = "UsuLabKey,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -20,8 +20,8 @@
 			$this->button_add = true;
 			$this->button_edit = true;
 			$this->button_delete = true;
-			$this->button_detail = true;
-			$this->button_show = true;
+			$this->button_detail = false;
+			$this->button_show = false;
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
@@ -30,29 +30,30 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"USUARIO","name"=>"UsuCodigo"];
-			$this->col[] = ["label"=>"LABORATORIO","name"=>"LabCodigo"];
-			$this->col[] = ["label"=>"ANALISIS","name"=>"AnaCodigo"];
-			$this->col[] = ["label"=>"ESTADO","name"=>"Estado"];
-			$this->col[] = ["label"=>"ANALISIS","name"=>"Resultado"];
+			$this->col[] = ["label"=>"UsuLabKey","name"=>"UsuLabKey"];
+			$this->col[] = ["label"=>"UsuCodigo","name"=>"UsuCodigo","join"=>"usuario,UsuNombre"];
+			$this->col[] = ["label"=>"LabCodigo","name"=>"LabCodigo","join"=>"laboratorio,LabNombre"];
+			$this->col[] = ["label"=>"AnaCodigo","name"=>"AnaCodigo","join"=>"analisis,AnaDescripcion"];
+			$this->col[] = ["label"=>"Estado","name"=>"Estado"];
+			$this->col[] = ["label"=>"Resultado","name"=>"Resultado"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'USUARIO','name'=>'UsuCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'usuario,UsuNombre'];
-			$this->form[] = ['label'=>'LABORATORIO','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
-			$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,CatDescripcion'];
-			$this->form[] = ['label'=>'ESTADO','name'=>'Estado','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'RESULTADO','name'=>'Resultado','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'UsuCodigo','name'=>'UsuCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'usuario,UsuNombre'];
+			$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'usuario,UsuNombre'];
+			$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
+			$this->form[] = ['label'=>'Estado','name'=>'Estado','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Resultado','name'=>'Resultado','type'=>'filemanager','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"UsuCodigo","name"=>"UsuCodigo","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"LabCodigo","name"=>"LabCodigo","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"AnaCodigo","name"=>"AnaCodigo","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"Estado","name"=>"Estado","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"Resultado","name"=>"Resultado","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ['label'=>'UsuCodigo','name'=>'UsuCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'usuario,UsuNombre'];
+			//$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'usuario,UsuNombre'];
+			//$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
+			//$this->form[] = ['label'=>'Estado','name'=>'Estado','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Resultado','name'=>'Resultado','type'=>'filemanager','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 

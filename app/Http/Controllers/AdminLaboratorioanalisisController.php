@@ -12,7 +12,7 @@
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = ",desc";
+			$this->orderby = "LabCodigo,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -31,19 +31,22 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Laboratorio","name"=>"LabCodigo","join"=>"laboratorio,LabNombre"];
-			$this->col[] = ["label"=>"Analisis","name"=>"AnaCodigo","join"=>"analisis,CatDescripcion"];
+			$this->col[] = ["label"=>"Analisis","name"=>"AnaCodigo","join"=>"analisis,AnaDescripcion"];
+			$this->col[] = ["label"=>"Certificacion","name"=>"AnaCertificacion"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'LABORATORIO','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
-			$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,CatDescripcion'];
+			$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
+			$this->form[] = ['label'=>'CERTIFICACION','name'=>'AnaCertificacion','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'0;1'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"LabCodigo","name"=>"LabCodigo","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"AnaCodigo","name"=>"AnaCodigo","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ['label'=>'LABORATORIO','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
+			//$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
+			//$this->form[] = ['label'=>'CERTIFICACION','name'=>'AnaCertificacion','type'=>'checkbox','validation'=>'required','width'=>'col-sm-9'];
 			# OLD END FORM
 
 			/* 
