@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminLaboratorioanalisisController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminLaboratorioanalisis23Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "LabCodigo,desc";
+			$this->orderby = "LanAnaCodigo,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -30,23 +30,23 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Laboratorio","name"=>"LabCodigo","join"=>"laboratorio,LabNombre"];
-			$this->col[] = ["label"=>"Analisis","name"=>"AnaCodigo","join"=>"analisis,AnaDescripcion"];
-			$this->col[] = ["label"=>"Certificacion","name"=>"AnaCertificacion"];
+			$this->col[] = ["label"=>"LabCodigo","name"=>"LabCodigo","join"=>"laboratorio,LabNombre"];
+			$this->col[] = ["label"=>"AnaCodigo","name"=>"AnaCodigo","join"=>"analisis,AnaDescripcion"];
+			$this->col[] = ["label"=>"AnaCertificacion","name"=>"AnaCertificacion"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'LABORATORIO','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
-			$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
-			$this->form[] = ['label'=>'CERTIFICACION','name'=>'AnaCertificacion','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'0;1'];
+			$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
+			$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
+			$this->form[] = ['label'=>'AnaCertificacion','name'=>'AnaCertificacion','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'0;1'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'LABORATORIO','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
-			//$this->form[] = ['label'=>'ANALISIS','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
-			//$this->form[] = ['label'=>'CERTIFICACION','name'=>'AnaCertificacion','type'=>'checkbox','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
+			//$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaCodigo'];
+			//$this->form[] = ['label'=>'AnaCertificacion','name'=>'AnaCertificacion','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'0;1'];
 			# OLD END FORM
 
 			/* 
