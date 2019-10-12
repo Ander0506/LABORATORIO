@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class GestionController extends Controller
 {
-    public function index()
+    public function index($id)
     {
         //$usuariolaboratorios  = Usuariolaboratorio::all();
 
@@ -18,7 +18,7 @@ class GestionController extends Controller
             -> join('usuario','usuariolaboratorio.UsuCodigo','=','usuario.UsuCodigo')
             -> join('analisis','usuariolaboratorio.AnaCodigo','=','analisis.AnaCodigo')
             -> select('usuariolaboratorio.*','usuario.UsuNombre','analisis.AnaDescripcion')
-            -> where('usuariolaboratorio.LabCodigo', '=', 1)
+            -> where('usuariolaboratorio.LabCodigo', '=', $id)
             ->get();
         return  view('Gestion')->with('usuariolaboratorios',$usuariolaboratorios);
     }

@@ -20,7 +20,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show mt-4 active" id="usuario" role="tabpanel" aria-labelledby="home-tab">
 
-                        <form method="POST" action="">
+                        <form method="POST" action="{{url('login/usuario')}}">
                             @csrf
                             <!-- Email -->
                             <input type="text" name="UsuUsuario" class="form-control mb-4" placeholder="Correo Electrónico">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="tab-pane fade mt-4" id="laboratorio" role="tabpanel" aria-labelledby="profile-tab">
 
-                        <form method="POST" action="">
+                        <form method="POST" action="{{url('login/laboratorio')}}">
                             @csrf
 
                             <input type="text" name="LabUsuario" class="form-control mb-4" placeholder="Usuario">
