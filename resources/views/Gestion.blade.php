@@ -54,7 +54,7 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form method="POST" action="{{url('gestion',[$usuariolaboratorio -> UsuLabKey])}}">
+                                                <form method="POST" action="{{url('gestion/'.$id.','.$usuariolaboratorio -> UsuLabKey)}}">
                                                     @csrf
                                                     <div class="modal-body mx-3">
                                                         <select class="browser-default custom-select" name="Estado">
@@ -69,7 +69,7 @@
                                                                 <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
                                                             </div>
                                                             <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" >
+                                                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" required>
                                                                 <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
                                                             </div>
                                                         </div>

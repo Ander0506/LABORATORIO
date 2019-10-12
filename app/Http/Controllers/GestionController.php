@@ -20,17 +20,19 @@ class GestionController extends Controller
             -> select('usuariolaboratorio.*','usuario.UsuNombre','analisis.AnaDescripcion')
             -> where('usuariolaboratorio.LabCodigo', '=', $id)
             ->get();
-        return  view('Gestion')->with('usuariolaboratorios',$usuariolaboratorios);
+        return  view('Gestion')
+            ->with('usuariolaboratorios',$usuariolaboratorios)
+            ->with('id',$id);
     }
 
-    public function update($key,request $request){
+    public function update($id, $key,request $request){
         DB::table('usuarioLaboratorio')
             ->where('UsuLabKey', $key)
             ->update(['Estado' => $request->get('Estado')]);
         DB::table('usuarioLaboratorio')
             ->where('UsuLabKey', $key)
             ->update(['Resultado' => $request->get('Resultado')]);
-            return $this->index();
+            return redirect('gestion/'.$id);
 
     }
 
