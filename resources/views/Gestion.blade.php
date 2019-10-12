@@ -54,7 +54,7 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form method="POST" action="{{url('gestion/'.$id.','.$usuariolaboratorio -> UsuLabKey)}}">
+                                                <form method="POST" action="{{url('gestion/'.$id.','.$usuariolaboratorio -> UsuLabKey)}}" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body mx-3">
                                                         <select class="browser-default custom-select" name="Estado">
