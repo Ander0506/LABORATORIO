@@ -31,7 +31,8 @@ class GestionController extends Controller
             ->update(['Estado' => $request->get('Estado')]);
         DB::table('usuarioLaboratorio')
             ->where('UsuLabKey', $key)
-            ->update(['Resultado' => $request->get('Resultado')]);
+
+            ->update(['Resultado' => request()->Resultado->storeAs('uploads/file', request()->Resultado->getClientOriginalName())]);
             return redirect('gestion/'.$id);
 
     }

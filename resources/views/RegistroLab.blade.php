@@ -9,7 +9,7 @@
                     <!--      Wizard container        -->
                     <div class="wizard-container">
                         <div class="card wizard-card z-depth-0 vh-75" data-color="green" id="wizardProfile">
-                            <form method="POST" action="{{route('registrolab')}}">
+                            <form method="POST" action="{{route('registrolab')}}" enctype="multipart/form-data">
                             @csrf
                             <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
 

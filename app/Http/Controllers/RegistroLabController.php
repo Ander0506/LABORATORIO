@@ -17,7 +17,7 @@ class RegistroLabController extends Controller
     public function store(Request $request)
     {
         $laboratorio = new Laboratorio(array(
-            'LabImg' => $request->get('LabImg'),
+            'LabImg' => request()->LabImg->storeAs('uploads/img', request()->LabImg->getClientOriginalName()),
             'LabNombre' => $request->get('LabNombre'),
             'LabIdentificacion' => $request->get('LabIdentificacion'),
             'LabDesc' => $request->get('LabDesc'),
