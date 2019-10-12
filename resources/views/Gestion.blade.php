@@ -31,7 +31,17 @@
                                 <tr>
                                     <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> UsuNombre !!}</td>
                                     <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> AnaDescripcion !!}</td>
-                                    <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> Estado !!}</td>
+                                    <td class="pt-3-half" contenteditable="true">
+                                        @if($usuariolaboratorio -> Estado == 1)
+                                            Muestra Recibida
+                                        @endif
+                                        @if($usuariolaboratorio -> Estado == 2)
+                                            En Proceso
+                                        @endif
+                                        @if($usuariolaboratorio -> Estado == 3)
+                                            Analisis Finalizado
+                                        @endif
+                                    </td>
                                     <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> Resultado !!}</td>
                                     <td><a href="" class="" data-toggle="modal" data-target="{{'#modalLoginForm'.$usuariolaboratorio -> UsuLabKey}}">Click</a></td>
                                     <div class="modal fade" id="{{'modalLoginForm'.$usuariolaboratorio -> UsuLabKey}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -48,8 +58,8 @@
                                                     @csrf
                                                     <div class="modal-body mx-3">
                                                         <select class="browser-default custom-select" name="Estado">
-                                                            <option value=1>Muestra Entregada</option>
-                                                            <option value=2>En Analisis</option>
+                                                            <option value=1>Muestra Recibida</option>
+                                                            <option value=2>En Proceso</option>
                                                             <option value=3>Analisis Finalizado</option>
                                                         </select>
                                                         <br>

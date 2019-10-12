@@ -31,7 +31,17 @@
                     <tr>
                         <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> LabNombre !!}</td>
                         <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> AnaDescripcion !!}</td>
-                        <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> Estado !!}</td>
+                        <td class="pt-3-half" contenteditable="true">
+                                @if($usuariolaboratorio -> Estado == 1)
+                                    Muestra Recibida
+                                @endif
+                                @if($usuariolaboratorio -> Estado == 2)
+                                    En Proceso
+                                @endif
+                                @if($usuariolaboratorio -> Estado == 3)
+                                        Analisis Finalizado
+                                @endif
+                        </td>
                         <td class="pt-3-half" contenteditable="true"><a href="{{'gestionusuario'}}"></a></td>
 
 
