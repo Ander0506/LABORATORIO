@@ -15,9 +15,9 @@ class GestionUsuarioController extends Controller
         //$usuariolaboratorios  = Usuariolaboratorio::all();
 
         $usuariolaboratorios = DB::table('usuariolaboratorio')
-            -> join('usuario','usuariolaboratorio.UsuCodigo','=','usuario.UsuCodigo')
+            -> join('laboratorio','usuariolaboratorio.LabCodigo','=','laboratorio.LabCodigo')
             -> join('analisis','usuariolaboratorio.AnaCodigo','=','analisis.AnaCodigo')
-            -> select('usuariolaboratorio.*','usuario.UsuNombre','analisis.AnaDescripcion')
+            -> select('usuariolaboratorio.*','laboratorio.LabNombre','analisis.AnaDescripcion')
             -> where('usuariolaboratorio.UsuCodigo', '=', 1)
             ->get();
         return  view('gestionusuario')->with('usuariolaboratorios',$usuariolaboratorios);
