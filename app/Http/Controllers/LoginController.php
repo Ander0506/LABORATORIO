@@ -2,23 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Laboratorio;
 use App\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function __construct()
     {
-        return view('login');
+        $this->middleware('guest', ['only' => 'index']);
     }
 
-    public  function autentication($id = "", Request $request){
+    public function index()
+    {
+        return view('auth.login');
+
+    }
+
+    public  function login($id = "", Request $request){
         if ($id == 'usuario'){
             $usuario = Usuario::where('UsuUsuario', $request->get('UsuUsuario'))
                 ->where('UsuPass', $request->get('UsuPass'))->get();
@@ -30,14 +38,32 @@ class LoginController extends Controller
         }
 
         if($id == 'laboratorio'){
-            $laboratorio = Laboratorio::where('LabUsuario', $request->get('LabUsuario'))
+
+            $credentials = $this->validate(request(), [
+                'LabUsuario' => 'required|string',
+                'password' => 'required|string'
+            ]);
+
+            //$credentials['LabPass'] = Hash::make($request->get('LabPass'));
+
+            if(Auth::guard('laboratorio')->attempt($credentials)){
+
+                return redirect()->route('home');
+            }
+
+            return back()
+                ->withErrors(['LabUsuario' => trans('auth.failed')])
+                ->withInput(request(['LabUsuario']));
+
+
+           /* $laboratorio = Laboratorio::where('LabUsuario', $request->get('LabUsuario'))
                 ->where('LabPass', $request->get('LabPass'))->get();
             $labCodigo = $laboratorio[0]->LabCodigo;
             if(!empty($labCodigo)){
                 return redirect('gestion/'.$labCodigo);
             }else{
                 return 'Usuario o contraseña incorrectos';
-            }
+            }*/
         }
     }
 

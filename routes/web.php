@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController')->name('home');
+Route::get('/home', 'HomeController')->name('home');
 Route::get('/about','AboutController')->name('about');
-Route::get('/login', 'LoginController@index')->name('login');
+Route::get('/', 'LoginController@index')->name('login');
+//Route::get('/login/laboratorio', 'LoginController@index')->name('login');
 Route::get('/laboratorio','LaboratorioController@index')->name('laboratorio');
 Route::get('/contacto','ContactoController@index')->name('cantacto');
 Route::get('/registropublico','RegistroPublicoController@index')->name('registropublico');
@@ -25,7 +26,10 @@ Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
 Route::get('/gestionusuario','GestionUsuarioController@index')->name('gestionusuario');
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 Route::post('/gestion/{id},{key}','GestionController@update')->name('gestion');
-Route::post('/login/{id?}', 'LoginController@autentication');
+Route::post('/login/{id?}', 'LoginController@login');
+//Route::post('/login/', 'LoginController@login');
+
+
 
 /*
 Route::get('/', function () {

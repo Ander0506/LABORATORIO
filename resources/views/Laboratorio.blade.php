@@ -49,14 +49,14 @@
 
             <div class="row">
                 @foreach($laboratorios as $laboratorio)
-                <div class="col-lg-4 col-md-12 mb-4">
+                <div class="col-lg-3 col-md-12 mb-4">
                     <!--Card-->
-                    <div class="card card-cascade wider mb-4">
+                    <div class="card card-cascade wider p-0">
 
                         <!--Card image-->
                         <div class="view view-cascade">
-                            {{--<img src="{{asset(hexdec (base64_encode($laboratorio->LabImg)))}}" class="card-img-top">--}}
-                            <img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">
+                            <img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">
+                            {{--<img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">--}}
 
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
