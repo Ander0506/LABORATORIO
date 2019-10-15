@@ -58,9 +58,12 @@
                                                     @csrf
                                                     <div class="modal-body mx-3">
                                                         <select class="browser-default custom-select" name="Estado">
-                                                            <option value=1>Muestra Recibida</option>
-                                                            <option value=2>En Proceso</option>
-                                                            <option value=3>Analisis Finalizado</option>
+                                                            <option value=1>En Espera</option>
+                                                            <option value=2>Aprobada</option>
+                                                            <option value=3>Muestra Recogida</option>
+                                                            <option value=4>Muestra Entregada</option>
+                                                            <option value=5>En Proceso</option>
+                                                            <option value=6>Analisis Fianlizado</option>
                                                         </select>
                                                         <br>
                                                         <br>

@@ -3,77 +3,95 @@
 @section('content')
     <!-- Vertical Steppers -->
     <div class="row mt-1">
-        <div class="col-md-12">
+        <div class="col-md-6">
 
-            <!-- Stepers Wrapper -->
-            <ul class="stepper stepper-vertical">
-
-                <!-- First Step -->
-                <li class="completed">
-                    <a href="#!">
-                        <span class="circle">1</span>
-                        <span class="label">First step</span>
-                    </a>
-                </li>
-
-                <!-- Second Step -->
-                <li class="active">
-
-                    <!--Section Title -->
-                    <a href="#!">
-                        <span class="circle">2</span>
-                        <span class="label">Second step</span>
-                    </a>
-
-                    <!-- Section Description -->
-                    <div class="step-content grey lighten-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
-                            iusto
-                            quaerat
-                            vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
-                            nostrum
-                            ut,
-                            nobis porro sapiente.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
-                            repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
-                            totam,
-                            atque odit fugiat.</p>
-                        <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
-                            reiciendis,
-                            vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
-                            expedita ab
-                            fugiat.</p>
+                <form method="POST" action="{{route('guia')}}" enctype="multipart/form-data" name="form3">
+                    @CSRF
+                    <div class="" id="modalSubscriptionForm" tabindex="" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mx-3">
+                                    <div class="md-form mb-5">
+                                        <input type="text" id="form3" class="form-control validate" NAME="Guia">
+                                        <label data-error="wrong" data-success="right" for="form3">NUMERO DE GUIA</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button class="btn btn-indigo" type="submit">Verificar <i class="fas fa-paper-plane-o ml-1"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-
-                <!-- Third Step -->
-                <li class="warning">
-                    <a href="#!">
-                        <span class="circle"><i class="fas fa-exclamation"></i></span>
-                        <span class="label">Third step</span>
-                    </a>
-                </li>
-
-                <!-- Fourth Step -->
-                <li>
-                    <a href="#!">
-                        <span class="circle">4</span>
-                        <span class="label">Fourth step</span>
-                    </a>
-                </li>
-
-            </ul>
-            <!-- /.Stepers Wrapper -->
-
+                </form>
         </div>
+        <div class="col-md-6">
+            @if ($usuariolaboratorios->isEmpty())
+                <DIV CLASS="justify-content-center">
+                    <CENTER>
+                        <BR>
+                        <div class="alert alert-danger col-sm-6 " role="alert">
+                            <CENTER><STRONG>INGRESE UNA GUIA VALIDA</STRONG></CENTER>
+                        </div>
+                    </CENTER>
+                </DIV>
+            @else
+                @foreach($usuariolaboratorios as $usuariolaboratorio)
+                    <!-- Stepers Wrapper -->
+                    <ul class="stepper stepper-vertical">
+
+                        <li class="{{$usuariolaboratorio -> Estado == 1 ? 'warning':'completed'}}">
+                            <a href="#!">
+                                <span class="circle">1</span>
+                                <span class="label">En espera de confirmación.</span>
+                            </a>
+                        </li>
+
+                        <li class="{{$usuariolaboratorio -> Estado == 2 ? 'warning':($usuariolaboratorio -> Estado < 2 ? '': 'completed')}}">
+                            <a href="#!">
+                                <span class="circle">2</span>
+                                <span class="label">Analisis Aprobado.</span>
+                            </a>
+                        </li>
+
+                        <li class="{{$usuariolaboratorio -> Estado == 3 ? 'warning':($usuariolaboratorio -> Estado < 3 ? '': 'completed')}}">
+                            <a href="#!">
+                                <span class="circle">3</span>
+                                <span class="label">Muestra Recogida.</span>
+                            </a>
+                        </li>
+
+                        <!-- Second Step -->
+                        <li class="{{$usuariolaboratorio -> Estado == 4 ? 'warning':($usuariolaboratorio -> Estado < 4 ? '': 'completed')}}">
+                            <a href="#!">
+                                <span class="circle">4</span>
+                                <span class="label">Muestra entregada.</span>
+                            </a>
+                        </li>
+
+                        <!-- Third Step -->
+                        <li class="{{$usuariolaboratorio -> Estado == 5 ? 'warning':($usuariolaboratorio -> Estado < 5 ? '': 'completed')}}">
+                            <a href="#!">
+                                <span class="circle">5</span>
+                                <span class="label">Analisis en proceso.</span>
+                            </a>
+                        </li>
+
+                        <!-- Fourth Step -->
+                        <li CLASS="{{$usuariolaboratorio -> Estado == 6 ? 'warning':($usuariolaboratorio -> Estado < 6 ? '': 'completed')}}">
+                            <a href="#!">
+                                <span class="circle">6</span>
+                                <span class="label">Analisis finalizado.</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- /.Stepers Wrapper -->
+                    @endforeach
+                @endif
+        </div>
+
     </div>
 
-    <!-- Steppers Navigation -->
-    <div class="row mt-1">
-        <div class="col-md-12 text-right">
-            <button class="btn btn-flat btn-sm">Cancel</button>
-            <button class="btn btn-primary btn-sm">Next</button>
-        </div>
-    </div>
-    <!-- /.Vertical Steppers -->
+
 @endsection
