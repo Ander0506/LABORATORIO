@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'laboratorio' =>[
+            'driver' => 'session',
+            'provider' => 'lab',
+        ],
     ],
 
     /*
@@ -68,6 +73,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'lab' => [
+            'driver' => 'eloquent',
+            'model' => App\Auth\Laboratorio::class,
         ],
 
         // 'users' => [

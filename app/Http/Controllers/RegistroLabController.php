@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Laboratorio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegistroLabController extends Controller
 {
@@ -25,7 +26,7 @@ class RegistroLabController extends Controller
             'LabTelefono' => $request->get('LabTelefono'),
             'LabEmail' => $request->get('LabEmail'),
             'LabUsuario' => $request->get('LabUsuario'),
-            'LabPass' => $request->get('LabPass'),
+            'LabPass' => Hash::make($request->get('LabPass')),
             'LabCertificacion' => $request->get('LabCertificacion')
         ));
         $laboratorio->save();
