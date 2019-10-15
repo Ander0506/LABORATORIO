@@ -88,7 +88,7 @@
                                                 <div class="">
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Contraseña <small>(Requerido)</small></label>
-                                                        <input name="LabPass" type="text" class="form-control" required>
+                                                        <input name="password" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>

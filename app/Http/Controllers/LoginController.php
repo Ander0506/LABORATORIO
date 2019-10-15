@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Usuario;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
 
+    use AuthenticatesUsers;
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +50,8 @@ class LoginController extends Controller
 
             if(Auth::guard('laboratorio')->attempt($credentials)){
 
-                return redirect()->route('home');
+                return var_dump(Auth::check());
+//                return redirect('home');
             }
 
             return back()

@@ -6,26 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function __construct()
     {
-        $usuarios = array(
-            ['nombre'   =>  'Anderson'],
-            ['nombre'   =>  'Jairo'],
-            ['nombre'   =>  'Jhonnathan']
-        );
+        $this->middleware('auth');
+    }
 
-        $laboratorios = array(
-            ['nombre'   =>  'MNJ'],
-            ['nombre'   =>  'KJI'],
-            ['nombre'   =>  'PIRE']
-        );
-
-        return view('Home', compact('usuarios', 'laboratorios'));
+    public function index(){
+        return view('home');
     }
 }

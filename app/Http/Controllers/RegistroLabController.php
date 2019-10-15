@@ -26,7 +26,7 @@ class RegistroLabController extends Controller
             'LabTelefono' => $request->get('LabTelefono'),
             'LabEmail' => $request->get('LabEmail'),
             'LabUsuario' => $request->get('LabUsuario'),
-            'LabPass' => Hash::make($request->get('LabPass')),
+            'password' => Hash::make($request->get('password')),
             'LabCertificacion' => $request->get('LabCertificacion')
         ));
         $laboratorio->save();

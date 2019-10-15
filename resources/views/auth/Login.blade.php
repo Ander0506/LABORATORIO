@@ -60,7 +60,7 @@
                             <button class="btn btn-info btn-block my-4" type="submit">Iniciar sesión</button>
 
                             <p>¿Aún no tienes cuenta?
-                                <a href="">Regístrate!</a>
+                                <a href="{{route('registrolab')}}">Regístrate!</a>
                             </p>
 
                         </form></div>

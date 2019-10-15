@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/home', 'HomeController')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about','AboutController')->name('about');
 Route::get('/', 'LoginController@index')->name('login');
 //Route::get('/login/laboratorio', 'LoginController@index')->name('login');
@@ -30,8 +30,6 @@ Route::post('/login/{id?}', 'LoginController@login');
 Route::get('/guia','GuiaController@index')->name('guia');
 Route::post('/guia','GuiaController@store')->name('guia');
 //Route::post('/login/', 'LoginController@login');
-
-
 
 /*
 Route::get('/', function () {
