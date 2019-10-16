@@ -29,6 +29,7 @@ Route::post('/gestion/{id},{key}','GestionController@update')->name('gestion');
 Route::post('/login/{id?}', 'LoginController@login');
 Route::get('/guia','GuiaController@index')->name('guia');
 Route::post('/guia','GuiaController@store')->name('guia');
+Route::get('/labanalisis/{id?}','labanalisiscontroller@index')->name('labanalisis');
 //Route::post('/login/', 'LoginController@login');
 
 /*
