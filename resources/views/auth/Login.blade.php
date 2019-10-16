@@ -22,11 +22,17 @@
 
                         <form method="POST" action="{{url('login/usuario')}}">
                             @csrf
-                            <!-- Email -->
-                            <input type="text" name="UsuUsuario" class="form-control mb-4" placeholder="Usuario">
 
-                            <!-- Password -->
-                            <input type="password" name="passwordUsuario" class="form-control mb-4" placeholder="Contraseña">
+                            <div class="form-group {{$errors->has('UsuUsuario') ? 'has-error': ''}}">
+                                <input type="text" name="UsuUsuario" class="form-control mb-4" placeholder="Usuario" value="{{old('UsuUsuario')}}" required>
+                                {!! $errors->first('UsuUsuario', '<span class="help-block">:message</span>') !!}
+                            </div>
+
+                            <div class="form-group {{$errors->has('password') ? 'has-error': ''}}">
+                                <input type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
+                                {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
+                            </div>
+
 
                             <!-- Sign in button -->
                             <button class="btn btn-info btn-block my-4" type="submit">Iniciar sesión</button>
@@ -48,10 +54,10 @@
 
                             </div>
 
-                            <div class="form-group {{$errors->has('LabPass') ? 'has-error': ''}}">
+                            <div class="form-group {{$errors->has('password') ? 'has-error': ''}}">
                                 <!-- Password -->
                                 <input type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
-                                {!! $errors->first('LabPass', '<span class="help-block">:message</span>') !!}
+                                {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                             </div>
 
 

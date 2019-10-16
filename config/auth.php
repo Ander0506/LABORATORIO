@@ -50,6 +50,10 @@ return [
             'driver' => 'session',
             'provider' => 'lab',
         ],
+        'usuario' => [
+            'driver' => 'session',
+            'provider' => 'usuario'
+        ]
     ],
 
     /*
@@ -78,6 +82,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Auth\Laboratorio::class,
         ],
+        'usuario' => [
+            'driver' => 'eloquent',
+            'model' => App\Auth\Usuario::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

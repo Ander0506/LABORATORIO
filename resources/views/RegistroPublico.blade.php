@@ -69,7 +69,7 @@
                                                 <div class="">
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Contraseña <small>(Obligatorio)</small></label>
-                                                        <input name="UsuPass" type="text" class="form-control" required>
+                                                        <input name="password" type="password" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>

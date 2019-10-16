@@ -8,9 +8,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
+           @if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())
             <li class="nav-item {{setAction('home')}}">
                 <a class="nav-link" href="{{route('home')}}">INICIO</a>
             </li>
+           @endif
             <li class="nav-item {{setAction('about')}}">
                 <a class="nav-link" href="{{route('about')}}">CONÓCENOS</a>
             </li>
