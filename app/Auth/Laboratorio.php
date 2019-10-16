@@ -16,4 +16,5 @@ class Laboratorio extends Authenticatable
     use Notifiable;
 
     protected $table = 'laboratorio';
+    protected $primaryKey = 'LabCodigo';
 }

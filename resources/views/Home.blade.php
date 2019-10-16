@@ -7,7 +7,7 @@
         </div>
 
     </div>
-    <h1>Bienvenido {{dump(auth()->user())}}</h1>
+    <h1>Bienvenido {{auth()->user()->LabUsuario}}</h1>
 
 
 @endsection

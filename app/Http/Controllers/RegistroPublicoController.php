@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use App\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegistroPublicoController extends Controller
 {
@@ -23,7 +24,7 @@ class RegistroPublicoController extends Controller
             'UsuTelefono' => $request->get('UsuTelefono'),
             'UsuEmail' => $request->get('UsuEmail'),
             'UsuUsuario' => $request->get('UsuUsuario'),
-            'UsuPass' => $request->get('UsuPass')
+            'password' => Hash::make($request->get('password'))
         ));
         $usuario->save();
         return 'Datos guardados';
