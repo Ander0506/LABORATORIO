@@ -43,7 +43,7 @@ class LabAnalisisController extends Controller
             'AnaLabDisponible' => $request->get('AnaLabDisponible')
         ));
         $laboratorioAnalisi->save();
-        return redirect('labanalisis');
+        return @$this->index();
     }
 
 }
