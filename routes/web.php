@@ -22,6 +22,7 @@ Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
 Route::get('/gestionusuario','GestionUsuarioController@index')->name('gestionusuario');
 Route::get('/guia','GuiaController@index')->name('guia');
 Route::get('/labanalisis','LabAnalisiscontroller@index')->name('labanalisis');
+Route::get('/contratar','contratarcontroller@index')->name('contratar');
 
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 Route::post('/registropublico','RegistroPublicoController@store')->name('registropublico');
@@ -31,6 +32,7 @@ Route::post('/guia','GuiaController@store')->name('guia');
 Route::post('/login/', 'LoginController@login');
 Route::post('/labanalisis','LabAnalisisController@insert')->name('labanalisis');
 Route::post('/labanalisis/{key}','LabAnalisisController@update')->name('labanalisisupdate');
+Route::post('/contratar','contratarcontroller@index')->name('contratar');
 /*
 Route::get('/', function () {
     return view('welcome');

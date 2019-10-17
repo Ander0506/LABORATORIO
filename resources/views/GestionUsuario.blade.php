@@ -32,15 +32,24 @@
                         <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> LabNombre !!}</td>
                         <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> AnaDescripcion !!}</td>
                         <td class="pt-3-half" contenteditable="true">
-                                @if($usuariolaboratorio -> Estado == 1)
-                                    Muestra Recibida
-                                @endif
-                                @if($usuariolaboratorio -> Estado == 2)
-                                    En Proceso
-                                @endif
-                                @if($usuariolaboratorio -> Estado == 3)
-                                        Analisis Finalizado
-                                @endif
+                            @if($usuariolaboratorio -> Estado == 1)
+                                En Espera
+                            @endif
+                            @if($usuariolaboratorio -> Estado == 2)
+                                Aprobada
+                            @endif
+                            @if($usuariolaboratorio -> Estado == 3)
+                                Muestra Recogida
+                            @endif
+                            @if($usuariolaboratorio -> Estado == 4)
+                                Muestra Entregada
+                            @endif
+                            @if($usuariolaboratorio -> Estado == 5)
+                                Muestra Entregada
+                            @endif
+                            @if($usuariolaboratorio -> Estado == 6)
+                                Analisis Fianlizado
+                            @endif
                         </td>
                         <td><a href="{{ asset($usuariolaboratorio -> Resultado) }}" target="_blank">Click</a></td>
                     </tr>

@@ -93,9 +93,9 @@
                                                     </button>
                                                 </div>
                                                     <div class="modal-body mx-3">
-                                                        <div class="md-form mb-3">
-                                                            <input type="int" id="defaultForm-email" class="form-control validate" name="AnaLabPrecio2">
-                                                            <label data-error="wrong" data-success="right" for="defaultForm-email">Valor</label>
+                                                        <div class="md-form mb-5">
+                                                            <input type="int" class="form-control validate" name="AnaLabPrecio2">
+                                                            <label data-error="wrong" data-success="right" >Valor</label>
                                                         </div>
                                                         <div class="md-form mb-5">
                                                             <spam>¿Disponible?</spam>
