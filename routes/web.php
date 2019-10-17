@@ -21,15 +21,15 @@ Route::get('/gestion/{id?}','GestionController@index')->name('gestion');
 Route::get('/registrolab','RegistroLabController@index')->name('registrolab');
 Route::get('/gestionusuario','GestionUsuarioController@index')->name('gestionusuario');
 Route::get('/guia','GuiaController@index')->name('guia');
-
+Route::get('/labanalisis','LabAnalisiscontroller@index')->name('labanalisis');
 
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 Route::post('/registropublico','RegistroPublicoController@store')->name('registropublico');
 Route::post('/gestion/{id},{key}','GestionController@update')->name('gestion');
 Route::post('/login/{id?}', 'LoginController@login');
 Route::post('/guia','GuiaController@store')->name('guia');
-//Route::get('/labanalisis/{id?}','labanalisiscontroller@index')->name('labanalisis');
-//Route::post('/login/', 'LoginController@login');
+Route::post('/login/', 'LoginController@login');
+Route::post('/LabAnalisis','LabAnalisisController@insert')->name('LabAnalisis');
 
 /*
 Route::get('/', function () {

@@ -7,22 +7,36 @@
              aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h4 class="modal-title w-100 font-weight-bold">AGREGAR</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body mx-3">
-                        <div class="md-form mb-5">
-                            <input type="email" id="defaultForm-email" class="form-control validate">
-                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                    <form method="POST" action="{{route('LabAnalisis')}}" enctype="multipart/form-data">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold">AGREGAR</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-5">
+                                <select class="browser-default custom-select" name="AnaCodigo">
+                                    @foreach($analisis as $analisi)
+                                        <option value={!! $analisi -> AnaCodigo !!}>{!! $analisi -> AnaDescripcion !!}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="md-form mb-5">
+                                <input type="int" id="defaultForm-email" class="form-control validate" name="AnaLabPrecio">
+                                <label data-error="wrong" data-success="right" for="defaultForm-email">Valor</label>
+                            </div>
+                            <select class="browser-default custom-select" name="AnaLabDisponible">
 
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button class="btn btn-default">Login</button>
-                    </div>
+                                    <option value='SI'>SI</option>
+                                    <option value='NO'>NO</option>
+
+                            </select>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button class="btn btn-default" type="submit">Guardar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
