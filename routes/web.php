@@ -25,12 +25,12 @@ Route::get('/labanalisis','LabAnalisiscontroller@index')->name('labanalisis');
 
 Route::post('/registrolab','RegistroLabController@store')->name('registrolab');
 Route::post('/registropublico','RegistroPublicoController@store')->name('registropublico');
-Route::post('/gestion/{id},{key}','GestionController@update')->name('gestion');
+Route::post('/gestion/{key}','GestionController@update')->name('gestion');
 Route::post('/login/{id?}', 'LoginController@login');
 Route::post('/guia','GuiaController@store')->name('guia');
 Route::post('/login/', 'LoginController@login');
-Route::post('/LabAnalisis','LabAnalisisController@insert')->name('LabAnalisis');
-
+Route::post('/labanalisis','LabAnalisisController@insert')->name('labanalisis');
+Route::post('/labanalisis/{key}','LabAnalisisController@update')->name('labanalisisupdate');
 /*
 Route::get('/', function () {
     return view('welcome');

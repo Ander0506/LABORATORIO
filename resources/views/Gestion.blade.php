@@ -33,13 +33,22 @@
                                     <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> AnaDescripcion !!}</td>
                                     <td class="pt-3-half" contenteditable="true">
                                         @if($usuariolaboratorio -> Estado == 1)
-                                            Muestra Recibida
+                                            En Espera
                                         @endif
                                         @if($usuariolaboratorio -> Estado == 2)
-                                            En Proceso
+                                            Aprobada
                                         @endif
                                         @if($usuariolaboratorio -> Estado == 3)
-                                            Analisis Finalizado
+                                            Muestra Recogida
+                                        @endif
+                                        @if($usuariolaboratorio -> Estado == 4)
+                                           Muestra Entregada
+                                        @endif
+                                        @if($usuariolaboratorio -> Estado == 5)
+                                           Muestra Entregada
+                                        @endif
+                                        @if($usuariolaboratorio -> Estado == 6)
+                                           Analisis Fianlizado
                                         @endif
                                     </td>
                                     <td class="pt-3-half" contenteditable="true">{!! $usuariolaboratorio -> Resultado !!}</td>
@@ -54,7 +63,7 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form method="POST" action="{{url('gestion/'.$id.','.$usuariolaboratorio -> UsuLabKey)}}" enctype="multipart/form-data">
+                                                <form method="POST" action="{{route('gestion',$usuariolaboratorio -> UsuLabKey)}}" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body mx-3">
                                                         <select class="browser-default custom-select" name="Estado">

@@ -36,14 +36,25 @@ class LabAnalisisController extends Controller
 
     public function insert(Request $request){
         $laboratorioAnalisi = new LaboratorioAnalisis(array(
-            'LabCodigo' => $request->get(auth()->user()->LabCodigo),
+            'LabCodigo' => (auth()->user()->LabCodigo),
             'AnaCodigo' => $request->get('AnaCodigo'),
             'AnaLabPrecio' => $request->get('AnaLabPrecio'),
             'AnaLabAprobado' => ('NO'),
             'AnaLabDisponible' => $request->get('AnaLabDisponible')
         ));
         $laboratorioAnalisi->save();
-        return @$this->index();
+        return redirect('labanalisis');
+    }
+
+    public function update($key,Request $request){
+        DB::table('laboratorioanalisis')
+            ->where('LanAnaCodigo', $key)
+            ->update(['AnaLabPrecio' => $request->get('AnaLabPrecio2')]);
+        DB::table('laboratorioanalisis')
+            ->where('LanAnaCodigo', $key)
+            ->update(['AnaLabDisponible' => $request->get('AnaLabDisponible2')]);
+
+        return redirect('labanalisis');
     }
 
 }

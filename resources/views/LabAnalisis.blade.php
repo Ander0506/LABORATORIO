@@ -7,7 +7,8 @@
              aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <form method="POST" action="{{route('LabAnalisis')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('labanalisis')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="modal-header text-center">
                             <h4 class="modal-title w-100 font-weight-bold">AGREGAR</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -16,6 +17,7 @@
                         </div>
                         <div class="modal-body mx-3">
                             <div class="md-form mb-5">
+                                <spam>Analisis</spam>
                                 <select class="browser-default custom-select" name="AnaCodigo">
                                     @foreach($analisis as $analisi)
                                         <option value={!! $analisi -> AnaCodigo !!}>{!! $analisi -> AnaDescripcion !!}</option>
@@ -26,12 +28,13 @@
                                 <input type="int" id="defaultForm-email" class="form-control validate" name="AnaLabPrecio">
                                 <label data-error="wrong" data-success="right" for="defaultForm-email">Valor</label>
                             </div>
-                            <select class="browser-default custom-select" name="AnaLabDisponible">
-
-                                    <option value='SI'>SI</option>
-                                    <option value='NO'>NO</option>
-
-                            </select>
+                            <div class="md-form mb-5">
+                                <spam>¿Disponible?</spam>
+                                <select class="browser-default custom-select" name="AnaLabDisponible">
+                                        <option value='SI'>SI</option>
+                                        <option value='NO'>NO</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                             <button class="btn btn-default" type="submit">Guardar</button>
@@ -65,7 +68,8 @@
                                 <th class="text-center">Analisis</th>
                                 <th class="text-center">Valor</th>
                                 <th class="text-center">Aprobado</th>
-                                <th class="text-center">Disponible</th>
+                                <th class="text-center">Disponibilidad</th>
+                                <th class="text-center">Actualizar</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -75,6 +79,39 @@
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabPrecio !!}</td>
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabAprobado !!}</td>
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabDisponible !!}</td>
+                                    <td><a href="" class="" data-toggle="modal" data-target="{{'#modalupdate'.$laboratorioanalisi -> LanAnaCodigo}}">Click</a></td>
+                                    <div class="modal fade" id="{{'modalupdate'.$laboratorioanalisi -> LanAnaCodigo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                         aria-hidden="true">
+                                        <form method="POST" action="{{route('labanalisisupdate',$laboratorioanalisi -> LanAnaCodigo)}}" enctype="multipart/form-data">
+                                            @csrf
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header text-center">
+                                                    <h4 class="modal-title w-100 font-weight-bold">Actualizar Registro</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                    <div class="modal-body mx-3">
+                                                        <div class="md-form mb-3">
+                                                            <input type="int" id="defaultForm-email" class="form-control validate" name="AnaLabPrecio2">
+                                                            <label data-error="wrong" data-success="right" for="defaultForm-email">Valor</label>
+                                                        </div>
+                                                        <div class="md-form mb-5">
+                                                            <spam>¿Disponible?</spam>
+                                                            <select class="browser-default custom-select" name="AnaLabDisponible2">
+                                                                <option value='SI'>SI</option>
+                                                                <option value='NO'>NO</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer d-flex justify-content-center">
+                                                        <button type="submit" class="btn btn-default">Actualizar</button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
                                 </tr>
                             @endforeach
                             <!-- This is our clonable table line -->
