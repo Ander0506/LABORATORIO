@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Hash;
 
 class ContratarController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:usuario');
+    }
+
     public function index(request $request)
     {
         $laboratorioanalisis = DB::table('laboratorioanalisis')
@@ -22,22 +28,28 @@ class ContratarController extends Controller
 
         $analisis = Analisis::all();
 
-        return  view('Contratar')
+        return  view('contratar')
             ->with('laboratorioanalisis',$laboratorioanalisis)
             ->with('analisis',$analisis);
     }
 
-    public function solicitar(request $request){
-        $usuariolaboratorio = new Usuariolaboratorio(array(
+
+
+    public function crear(request $request)
+    {
+        $usuariolaboratorio = new usuariolaboratorio(array(
             'UsuCodigo' => auth()->user()->UsuCodigo,
             'LabCodigo' => $request->get('LabCodigo'),
-            'AnaCodigo' => $request->get('AnaCodigo'),
+            'AnaCodigo' => $request->get('AnaCodigo2'),
             'Estado' => 1,
             'FechaRecogida' => $request->get('FechaRecogida'),
             'Guia' => '',
             'MetodoPago' => $request->get('MetodoPago'),
             'Aprobado' => 'NO'
         ));
+
+        $usuariolaboratorio->save();
+        return redirect('contratar');
     }
 
 }

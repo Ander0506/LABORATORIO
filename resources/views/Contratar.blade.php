@@ -3,7 +3,7 @@
 @section('content')
 <div class="col-lg-12">
     <div class="row ">
-        <form method="POST" action="{{route('contratar')}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('contratar')}}" enctype="multipart/form-data" >
             @csrf
             <div class="col-lg-12 col-sm-12">
                 <select class="browser-default custom-select" name="AnaCodigo">
@@ -13,7 +13,7 @@
                 </select>
             </div>
             <div class="col-lg-12 col-sm-12">
-                <button class="btn btn-default" type="submit">Buscar</button>
+                <button class="btn btn-default">Buscar</button>
             </div>
         </form>
     </div>
@@ -45,27 +45,34 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header text-center">
-                                            <h4 class="modal-title w-100 font-weight-bold">Actualizar Registro</h4>
+                                            <h4 class="modal-title w-100 font-weight-bold" style="color: black">Solicitar Servicio</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form method="POST" action="" enctype="multipart/form-data">
+                                        <form method="POST" action="{{action('ContratarController@crear')}}" enctype="multipart/form-data">
+{{--                                        <form method="POST" action="" enctype="multipart/form-data" name="load">--}}
                                             @csrf
-                                            <div class="modal-body mx-3">
-                                                <div class="input-group">
-                                                    <!-- Material input -->
-                                                    <div class="md-form">
-                                                        <input type="text" id="form1" class="form-control" VALUE="{!! $laboratorioanalisi -> LabNombre !!}" disabled>
-                                                        <label for="form1">LABORATORIO</label>
-                                                    </div>
-                                                </div>
+                                            <div class="">
+                                                <input  id="form4" class="" VALUE="{!! $laboratorioanalisi -> LabCodigo !!}" type="hidden" name="LabCodigo">
                                             </div>
                                             <div class="modal-body mx-3">
                                                 <div class="input-group">
                                                     <!-- Material input -->
                                                     <div class="md-form">
-                                                        <input type="text" id="form2" class="form-control" VALUE="{!! $laboratorioanalisi -> AnaDescripcion !!}" disabled>
+                                                        <input type="text" id="form1" class="form-control" VALUE="{!! $laboratorioanalisi -> LabNombre !!}" name="LabNombre" disabled>
+                                                        <label for="form1">LABORATORIO</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <input  id="form7" class="" VALUE="{!! $laboratorioanalisi -> AnaCodigo !!}" type="hidden" name="AnaCodigo2">
+                                            </div>
+                                            <div class="modal-body mx-3">
+                                                <div class="input-group">
+                                                    <!-- Material input -->
+                                                    <div class="md-form">
+                                                        <input type="text" id="form2" class="form-control" VALUE="{!! $laboratorioanalisi -> AnaDescripcion !!}" name="AnaDescripcion" disabled>
                                                         <label for="form1">ANALISIS</label>
                                                     </div>
                                                 </div>
@@ -74,20 +81,20 @@
                                                 <div class="input-group">
                                                     <!-- Material input -->
                                                     <div class="md-form">
-                                                        <input type="datetime-local" id="form3" class="form-control">
+                                                        <input type="datetime-local" id="form3" class="form-control" name="FechaRecogida">
                                                         <label for="form1">FECHA Y HORA DE RECOGIDA</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-body mx-3">
-                                                <select class="browser-default custom-select">
+                                                <select class="browser-default custom-select" name="MetodoPago">
                                                     <option selected>Seleccione su metodo de pago</option>
                                                     <option value="Efectivo">Efectivo</option>
                                                     <option value="Plazo">Plazo</option>
                                                 </select>
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <button type="submit" class="btn btn-default">Actualizar</button>
+                                                <button type="submit" class="btn btn-default">Solicitar</button>
                                             </div>
                                         </form>
                                     </div>

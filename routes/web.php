@@ -32,8 +32,8 @@ Route::post('/guia','GuiaController@store')->name('guia');
 Route::post('/login/', 'LoginController@login');
 Route::post('/labanalisis','LabAnalisisController@insert')->name('labanalisis');
 Route::post('/labanalisis/{key}','LabAnalisisController@update')->name('labanalisisupdate');
-Route::post('/contratar','contratarcontroller@index')->name('contratar');
-//Route::post('/contratar','contratarcontroller@solicitar')->name('solicitarAnalisis');
+Route::post('/contratar','ContratarController@index')->name('contratar');
+//Route::post('/contratar','ContratarController@crear')->name('solicitaranalisis');
 /*
 Route::get('/', function () {
     return view('welcome');
