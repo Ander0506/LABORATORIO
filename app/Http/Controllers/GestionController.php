@@ -26,6 +26,7 @@ class GestionController extends Controller
             -> join('analisis','usuariolaboratorio.AnaCodigo','=','analisis.AnaCodigo')
             -> select('usuariolaboratorio.*','usuario.UsuNombre','analisis.AnaDescripcion')
             -> where('usuariolaboratorio.LabCodigo', '=', auth()->user()->LabCodigo)
+            -> where('usuariolaboratorio.Estado', '>',1)
             ->get();
         return  view('Gestion')
             ->with('usuariolaboratorios',$usuariolaboratorios);

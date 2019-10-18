@@ -33,7 +33,7 @@ Route::post('/login/', 'LoginController@login');
 Route::post('/labanalisis','LabAnalisisController@insert')->name('labanalisis');
 Route::post('/labanalisis/{key}','LabAnalisisController@update')->name('labanalisisupdate');
 Route::post('/contratar','ContratarController@index')->name('contratar');
-//Route::post('/contratar','ContratarController@crear')->name('solicitaranalisis');
+Route::post('/contratar/analisis','ContratarController@crear')->name('solicitaranalisis');
 /*
 Route::get('/', function () {
     return view('welcome');

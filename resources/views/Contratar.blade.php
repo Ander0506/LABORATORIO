@@ -50,7 +50,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form method="POST" action="{{action('ContratarController@crear')}}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{route('solicitaranalisis')}}" enctype="multipart/form-data">
 {{--                                        <form method="POST" action="" enctype="multipart/form-data" name="load">--}}
                                             @csrf
                                             <div class="">
@@ -89,8 +89,8 @@
                                             <div class="modal-body mx-3">
                                                 <select class="browser-default custom-select" name="MetodoPago">
                                                     <option selected>Seleccione su metodo de pago</option>
-                                                    <option value="Efectivo">Efectivo</option>
-                                                    <option value="Plazo">Plazo</option>
+                                                    <option value="EFECTIVO">Efectivo</option>
+                                                    <option value="PLAZO">Plazo</option>
                                                 </select>
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
