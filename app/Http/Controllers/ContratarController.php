@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Laboratorio;
 use App\LaboratorioAnalisis;
 use App\Analisis;
+use App\Usuariolaboratorio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class ContratarController extends Controller
 {
@@ -12,7 +15,7 @@ class ContratarController extends Controller
     {
         $laboratorioanalisis = DB::table('laboratorioanalisis')
             -> join('laboratorio','laboratorioanalisis.LabCodigo','=','laboratorio.LabCodigo')
-            -> select('laboratorioanalisis.*','laboratorio.*')
+            -> select('laboratorioanalisis.*','laboratorio.*','laboratorio.LabCodigo as labc')
             -> where('laboratorioanalisis.AnaCodigo', '=', $request->get('AnaCodigo'))
             ->get();
 
@@ -21,6 +24,18 @@ class ContratarController extends Controller
         return  view('Contratar')
             ->with('laboratorioanalisis',$laboratorioanalisis)
             ->with('analisis',$analisis);
+    }
+
+    public function solicitar(request $request){
+        $usuariolaboratorio = new Usuariolaboratorio(array(
+            'UsuCodigo' => auth()->user()->UsuCodigo,
+            'LabCodigo' => $request->get('LabCodigo'),
+            'AnaCodigo' => $request->get('AnaCodigo'),
+            'Estado' => 1,
+            'FechaRecogida' => $request->get('FechaRecogida'),
+            'Guia' => '',
+            'Aprobado' => 'NO'
+        ));
     }
 
 }

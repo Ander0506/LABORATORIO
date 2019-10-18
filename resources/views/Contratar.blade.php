@@ -39,7 +39,38 @@
                             <a class="btn btn-success btn-sm">$ {!! $laboratorioanalisi -> AnaLabPrecio !!} COP</a>
                         </div>
                         <div class="card-footer text-muted success-color white-text">
-                            <p class="mb-0">SOLICITAR</p>
+                            <p class="mb-0"><a href="" class="" data-toggle="modal" data-target="{{'#modalLoginForm'.$laboratorioanalisi -> LabCodigo}}">SOLICITAR</a></p>
+                            <div class="modal fade" id="{{'modalLoginForm'.$laboratorioanalisi -> LabCodigo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center">
+                                            <h4 class="modal-title w-100 font-weight-bold">Actualizar Registro</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form method="POST" action="{{route('solicitar')}}" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="modal-body mx-3">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" required>
+                                                        <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="submit" class="btn btn-default">Actualizar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

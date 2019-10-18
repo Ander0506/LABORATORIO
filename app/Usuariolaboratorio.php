@@ -9,4 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class Usuariolaboratorio extends Model
 {
     protected $table = 'usuariolaboratorio';
+    protected $guarded = ['UsuLabKey'];
 }
