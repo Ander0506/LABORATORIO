@@ -15,7 +15,8 @@ class ContratarController extends Controller
     {
         $laboratorioanalisis = DB::table('laboratorioanalisis')
             -> join('laboratorio','laboratorioanalisis.LabCodigo','=','laboratorio.LabCodigo')
-            -> select('laboratorioanalisis.*','laboratorio.*','laboratorio.LabCodigo as labc')
+            -> join('analisis','laboratorioanalisis.AnaCodigo','=','analisis.AnaCodigo')
+            -> select('laboratorioanalisis.*','laboratorio.*','analisis.*')
             -> where('laboratorioanalisis.AnaCodigo', '=', $request->get('AnaCodigo'))
             ->get();
 
@@ -34,6 +35,7 @@ class ContratarController extends Controller
             'Estado' => 1,
             'FechaRecogida' => $request->get('FechaRecogida'),
             'Guia' => '',
+            'MetodoPago' => $request->get('MetodoPago'),
             'Aprobado' => 'NO'
         ));
     }

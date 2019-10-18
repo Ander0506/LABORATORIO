@@ -50,19 +50,41 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form method="POST" action="{{route('solicitar')}}" enctype="multipart/form-data">
+                                        <form method="POST" action="" enctype="multipart/form-data">
                                             @csrf
                                             <div class="modal-body mx-3">
                                                 <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
-                                                    </div>
-                                                    <div class="custom-file">
-                                                        <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" required>
-                                                        <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
+                                                    <!-- Material input -->
+                                                    <div class="md-form">
+                                                        <input type="text" id="form1" class="form-control" VALUE="{!! $laboratorioanalisi -> LabNombre !!}" disabled>
+                                                        <label for="form1">LABORATORIO</label>
                                                     </div>
                                                 </div>
-
+                                            </div>
+                                            <div class="modal-body mx-3">
+                                                <div class="input-group">
+                                                    <!-- Material input -->
+                                                    <div class="md-form">
+                                                        <input type="text" id="form2" class="form-control" VALUE="{!! $laboratorioanalisi -> AnaDescripcion !!}" disabled>
+                                                        <label for="form1">ANALISIS</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body mx-3">
+                                                <div class="input-group">
+                                                    <!-- Material input -->
+                                                    <div class="md-form">
+                                                        <input type="datetime-local" id="form3" class="form-control">
+                                                        <label for="form1">FECHA Y HORA DE RECOGIDA</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body mx-3">
+                                                <select class="browser-default custom-select">
+                                                    <option selected>Seleccione su metodo de pago</option>
+                                                    <option value="Efectivo">Efectivo</option>
+                                                    <option value="Plazo">Plazo</option>
+                                                </select>
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-default">Actualizar</button>
