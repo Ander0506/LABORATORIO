@@ -1,3 +1,6 @@
+html *{
+    font-family: $Roboto;
+}
 .row{
   margin: 0px;
 }
@@ -9,7 +12,7 @@
 }
 
 .Content-Home{
-  height: 90vh;
+  height: auto;
 }
 
 .vh-60{

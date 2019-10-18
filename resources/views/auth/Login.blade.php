@@ -1,8 +1,7 @@
 @extends('Master')
-
 @section('content')
     <div class="row justify-content-center Content-Home">
-        <div class="col-4 d-grid align-content-center">
+        <div class="col-4 d-grid align-content-center vh-88">
             <div class="text-center border border-light p-5 card z-depth-1">
             <p class="h4 mb-4">Inicio de sesión</p>
 
@@ -22,14 +21,15 @@
 
                         <form method="POST" action="{{url('login/usuario')}}">
                             @csrf
-
-                            <div class="form-group {{$errors->has('UsuUsuario') ? 'has-error': ''}}">
-                                <input type="text" name="UsuUsuario" class="form-control mb-4" placeholder="Usuario" value="{{old('UsuUsuario')}}" required>
+                            <div class="md-form form-group mt-5 {{$errors->has('UsuUsuario') ? 'has-error': ''}}">
+                                <input id="UsuUsuario" type="text" name="UsuUsuario" class="form-control mb-4" value="{{old('UsuUsuario')}}" required>
+                                <label for="UsuUsuario">Usuario</label>
                                 {!! $errors->first('UsuUsuario', '<span class="help-block">:message</span>') !!}
                             </div>
 
-                            <div class="form-group {{$errors->has('password') ? 'has-error': ''}}">
-                                <input type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
+                            <div class="md-form form-group my-5 {{$errors->has('password') ? 'has-error': ''}}">
+                                <input id="passwordUsu" type="password" name="password" class="form-control mb-4" required>
+                                <label for="passwordUsu">Contraseña</label>
                                 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                             </div>
 
@@ -48,15 +48,17 @@
                         <form method="POST" action="{{url('login/laboratorio')}}">
                             @csrf
 
-                            <div class="form-group {{$errors->has('LabUsuario') ? 'has-error': ''}}">
-                                <input type="text" name="LabUsuario" class="form-control mb-4" placeholder="Usuario" value="{{old('LabUsuario')}}" required>
+                            <div class="md-form form-group mt-5 {{$errors->has('LabUsuario') ? 'has-error': ''}}">
+                                <input id="LabUsuario" type="text" name="LabUsuario" class="form-control mb-4" value="{{old('LabUsuario')}}" required>
+                                <label for="LabUsuario">Usuario</label>
                                 {!! $errors->first('LabUsuario', '<span class="help-block">:message</span>') !!}
 
                             </div>
 
-                            <div class="form-group {{$errors->has('password') ? 'has-error': ''}}">
+                            <div class="md-form form-group my-5 {{$errors->has('password') ? 'has-error': ''}}">
                                 <!-- Password -->
-                                <input type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
+                                <input id="passwordLab" type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
+                                <label for="passwordLab">Contraseña</label>
                                 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                             </div>
 

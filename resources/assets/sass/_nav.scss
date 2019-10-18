@@ -1,0 +1,17 @@
+.nav-custom{
+    color: #01427c !important;
+}
+
+.nav-custom:before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border: solid 2px white;
+    border-radius: 0px !important;
+}
+
+.active > .nav-custom:before{
+    border: solid 2px #b3fc38;
+}

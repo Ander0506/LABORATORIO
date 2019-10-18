@@ -9,6 +9,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth:laboratorio');
+        $this->middleware('auth:usuario');
     }
 
     public function index(){

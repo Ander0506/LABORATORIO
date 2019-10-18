@@ -1,6 +1,6 @@
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark white p-0">
     <a class="navbar-brand pt-2" href="#">
-        <img class="" height="50" alt="CERTILABS">
+        <img class="" height="50" alt="CERTILABS" src="{{asset('Images/Logo_CertiLab.png')}}">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,19 +8,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
-           @if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())
+           {{--@if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())--}}
             <li class="nav-item {{setAction('home')}}">
-                <a class="nav-link" href="{{route('home')}}">INICIO</a>
+                <a class="nav-link nav-custom p-4" href="{{route('home')}}">Inicio</a>
             </li>
-           @endif
+           {{--@endif--}}
             <li class="nav-item {{setAction('about')}}">
-                <a class="nav-link" href="{{route('about')}}">CONÓCENOS</a>
+                <a class="nav-link nav-custom p-4" href="{{route('about')}}">Conócenos</a>
             </li>
             <li class="nav-item {{setAction('laboratorio')}}">
-                <a class="nav-link" href="{{route('laboratorio')}}">LABORATORIOS</a>
+                <a class="nav-link nav-custom p-4" href="{{route('laboratorio')}}">Laboratorios</a>
             </li>
             <li class="nav-item {{setAction('cantacto')}}">
-                <a class="nav-link" href="{{route('cantacto')}}">CONTÁCTANOS</a>
+                <a class="nav-link nav-custom p-4" href="{{route('cantacto')}}">Contáctanos</a>
             </li>
             <li class="nav-item dropdown">
                 <!--

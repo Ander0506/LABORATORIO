@@ -1,5 +1,5 @@
 @extends('Master')
-
+@section('Style', asset('css/material-bootstrap-wizard.css'))
 @section('content')
     <div class="set-full-height vh-88 white">
         <!--   Big container   -->
