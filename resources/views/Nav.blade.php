@@ -37,7 +37,7 @@
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
 
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown mr-4 dropdown-custom">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user"></i>

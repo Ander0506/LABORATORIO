@@ -37,3 +37,18 @@ html *{
 .form-group.has-error .help-block{
   display: block;
 }
+
+.dropdown-custom .dropdown-toggle::after,
+.dropdown-custom > a > svg{
+    color: #126bdb;
+    font-size: 18px;
+    align-self: center;
+}
+
+.dropdown-custom > a{
+    display: flex !important;
+}
+
+.bg-section{
+    background-color: #fafafa;
+}

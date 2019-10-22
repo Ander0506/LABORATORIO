@@ -145,7 +145,7 @@
                     </div> <!-- wizard container -->
                 </div>
                 <div class="col-sm-6 vh-88 align-content-center d-grid">
-                    <img src="{{asset('Images/Img_Registro_Usu.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('Images/Img_Registro_Lab.png')}}" alt="" class="img-fluid">
                 </div>
             </div><!-- end row -->
         </div> <!--  big container -->

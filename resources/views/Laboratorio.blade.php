@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- News jumbotron -->
-    <div class="jumbotron text-center hoverable p-4">
+    <div class="text-center p-4 bg-section">
 
         <!-- Grid row -->
         <div class="row">
@@ -12,7 +12,7 @@
 
                 <!-- Featured image -->
                 <div class="view overlay">
-                    <img src="https://static.iris.net.co/dinero/upload/images/2017/8/3/248281_1.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
+                    <img src="{{asset('Images/Nuestros_Aliados.png')}}" class="img-fluid" alt="Sample image for first version of blog listing">
                     <a>
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -22,13 +22,18 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-7 text-md-left ml-3 mt-3">
+            <div class="col-md-7 text-md-left d-grid align-content-center">
 
-                <h4 class="h4 mb-4">Nuestros Aliados.</h4>
+                <div class="row d-block">
 
-                <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam
-                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+                    <h4 class="h4 mb-4">Nuestros Aliados.</h4>
+
+                    <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+
+                </div>
+
             </div>
             <!-- Grid column -->
 
@@ -47,7 +52,7 @@
         </DIV>
         @else
 
-            <div class="row">
+            <div class="row mt-4">
                 @foreach($laboratorios as $laboratorio)
                 <div class="col-lg-3 col-md-12 mb-4">
                     <!--Card-->
@@ -55,7 +60,8 @@
 
                         <!--Card image-->
                         <div class="view view-cascade">
-                            <img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">
+                            <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="card-img-top">
+                            {{--<img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">--}}
                             {{--<img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">--}}
 
                             <a href="#!">

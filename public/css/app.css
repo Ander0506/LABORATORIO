@@ -12564,13 +12564,13 @@ ul.stepper li.completed a .label {
 }
 
 .Title-Home {
-  color: white;
+  color: #4d4d4d;
   font-size: 30pt;
 }
 
 .Description-Home {
-  color: white;
-  font-size: 20pt;
+  color: #4d4d4d;
+  font-size: 18pt;
 }
 
 .nav-font {
@@ -12618,6 +12618,24 @@ html * {
 
 .form-group.has-error .help-block {
   display: block;
+}
+
+.dropdown-custom .dropdown-toggle::after,
+.dropdown-custom > a > svg {
+  color: #126bdb;
+  font-size: 18px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.dropdown-custom > a {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.bg-section {
+  background-color: #fafafa;
 }
 
 /*!
