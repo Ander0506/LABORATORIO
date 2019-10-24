@@ -45,7 +45,6 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-default"
                      aria-labelledby="navbarDropdownMenuLink-333">
                     <a class="dropdown-item" href="{{route('login')}}"><i class="fas fa-user mr-3"></i>Iniciar sesión</a>
-                    <a class="dropdown-item" href="{{route('registropublico')}}"><i class="fas fa-user mr-3"></i>Registrate</a>
                 </div>
             </li>
         </ul>

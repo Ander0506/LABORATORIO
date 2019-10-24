@@ -5,25 +5,31 @@
     <div class="row mt-1">
         <div class="col-md-6">
 
-                <form method="POST" action="{{route('guia')}}" enctype="multipart/form-data" name="form3">
-                    @CSRF
-                    <div class="" id="modalSubscriptionForm" tabindex="" role="dialog" aria-labelledby="myModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body mx-3">
-                                    <div class="md-form mb-5">
-                                        <input type="text" id="form3" class="form-control validate" NAME="Guia">
-                                        <label data-error="wrong" data-success="right" for="form3">NUMERO DE GUIA</label>
-                                    </div>
+            <form method="POST" action="{{route('guia')}}" enctype="multipart/form-data" name="form3">
+                @CSRF
+                <div class="" id="modalSubscriptionForm" tabindex="" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body mx-3">
+                                <div class="md-form mb-5">
+                                    <input type="text" id="form3" class="form-control validate" NAME="Guia">
+                                    <label data-error="wrong" data-success="right" for="form3">NUMERO DE GUIA</label>
                                 </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn btn-indigo" type="submit">Verificar <i class="fas fa-paper-plane-o ml-1"></i></button>
-                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button class="btn btn-indigo" type="submit">Verificar <i class="fas fa-paper-plane-o ml-1"></i></button>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
+            </form>
+
+            <div class="row">
+                <div id="proceso">
+
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
             @if ($usuariolaboratorios->isEmpty())
