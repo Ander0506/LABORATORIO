@@ -22,6 +22,25 @@
             <li class="nav-item {{setAction('cantacto')}}">
                 <a class="nav-link nav-custom p-4" href="{{route('cantacto')}}">Contáctanos</a>
             </li>
+
+            @if(\Illuminate\Support\Facades\Auth::guard('usuario')->check())
+                <li class="nav-item {{setAction('gestionusuario')}}">
+                    <a class="nav-link nav-custom p-4" href="{{route('gestionusuario')}}">Gestion</a>
+                </li>
+            @endif
+
+            @if(\Illuminate\Support\Facades\Auth::guard('usuario')->check())
+                <li class="nav-item {{setAction('contratar')}}">
+                    <a class="nav-link nav-custom p-4" href="{{route('contratar')}}">Analisis</a>
+                </li>
+            @endif
+
+            @if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())
+                <li class="nav-item {{setAction('labanalisis')}}">
+                    <a class="nav-link nav-custom p-4" href="{{route('labanalisis')}}">Analisis</a>
+                </li>
+            @endif
+
             <li class="nav-item dropdown">
                 <!--
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
