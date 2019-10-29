@@ -1,3 +1,24 @@
+window._ = require('lodash');
+window.Popper = require('mdbootstrap/js/popper.min').default;
+
+try {
+    window.$ = window.jQuery = require('jquery');
+
+    require('bootstrap');
+} catch (e) {}
+
+window.axios = require('axios');
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+let token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -5,14 +26,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./jquery-3.3.1.min');
-require('./bootstrap');
-require('./mdb.min');
-require('./popper.min');
+require('mdbootstrap/js/jquery-3.4.1.min');
+require('mdbootstrap/js/bootstrap');
+require('mdbootstrap/js/mdb');
 require('./fontawesome_all');
 require('./jquery.bootstrap');
 require('./material-bootstrap-wizard');
 require('./jquery.validate.min');
+require('datatables.net/js/jquery.dataTables');
 window.Vue = require('vue');
 
 /**

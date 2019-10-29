@@ -16,14 +16,14 @@
                             </CENTER>
                         </DIV>
                     @else
-                        <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <table id="TableLab" class="table table-bordered table-responsive-md table-striped text-center">
                             <thead>
                             <tr>
-                                <th class="text-center">Cliente</th>
-                                <th class="text-center">Analisis</th>
-                                <th class="text-center">Estado</th>
-                                <th class="text-center">Resultado</th>
-                                <th class="text-center">Actualizar</th>
+                                <th class="text-center th-sm">Cliente</th>
+                                <th class="text-center th-sm">Analisis</th>
+                                <th class="text-center th-sm">Estado</th>
+                                <th class="text-center th-sm">Resultado</th>
+                                <th class="text-center th-sm">Actualizar</th>
                             </tr>
                             </thead>
                             <tbody>

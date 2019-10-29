@@ -57,7 +57,7 @@
 
                             <div class="md-form form-group my-5 {{$errors->has('password') ? 'has-error': ''}}">
                                 <!-- Password -->
-                                <input id="passwordLab" type="password" name="password" class="form-control mb-4" placeholder="Contraseña" required>
+                                <input id="passwordLab" type="password" name="password" class="form-control mb-4" required>
                                 <label for="passwordLab">Contraseña</label>
                                 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                             </div>

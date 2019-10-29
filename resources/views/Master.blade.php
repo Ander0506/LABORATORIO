@@ -16,7 +16,7 @@
     @yield('content')
 
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
-    <script src="{{ asset("js/bodymovin.js") }}"></script>
-    <script src="{{ asset("js/main.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/lottie.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"></script>
 </body>
 </html>

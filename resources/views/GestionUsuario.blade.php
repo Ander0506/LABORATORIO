@@ -16,16 +16,16 @@
                         </CENTER>
                     </DIV>
                 @else
-                <table class="table table-bordered table-responsive-md table-striped text-center">
+                <table id="TableUsu" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th class="text-center">Guia</th>
-                        <th class="text-center">Laboratorio</th>
-                        <th class="text-center">Analisis</th>
-                        <th class="text-center">Fecha de recogida</th>
-                        <th class="text-center">Metodo de pago</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center">Descargar Resultado</th>
+                        <th class="text-center th-sm">Guia</th>
+                        <th class="text-center th-sm">Laboratorio</th>
+                        <th class="text-center th-sm">Analisis</th>
+                        <th class="text-center th-sm">Fecha de recogida</th>
+                        <th class="text-center th-sm">Metodo de pago</th>
+                        <th class="text-center th-sm">Estado</th>
+                        <th class="text-center th-sm">Descargar Resultado</th>
 
                     </tr>
                     </thead>

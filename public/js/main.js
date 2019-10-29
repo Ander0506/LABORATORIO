@@ -2,9 +2,9 @@ var posStep = $('ul.stepper-vertical li.warning').index();
 
 
 if (posStep == 2) {
-    var anim = bodymovin.loadAnimation({
-        container: document.getElementById('proceso'), // Required
-        path: '/lottie/Enviando_Muestra.json', // Required
+    var anim = l({
+        container: ('proceso'), // Required
+        path: '/lottie/Analisis_Aprobado.json', // Required
         renderer: 'svg', // Required
         loop: false, // Optional
         autoplay: true, // Optional
@@ -37,3 +37,9 @@ if (posStep == 2) {
     //         break;
     //     default:
     //         return '';
+
+$(document).ready(function () {
+    $('#TableUsu').DataTable();
+    $('#TableLab').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+});

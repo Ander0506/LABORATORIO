@@ -8,8 +8,10 @@
 
 // Bootstrap
 //@import '~bootstrap/scss/bootstrap';
-@import '~mdbootstrap/scss/mdb';
-@import '~mdbootstrap/css/bootstrap.min.css';
+@import '~mdbootstrap/css/bootstrap.css';
+@import '~mdbootstrap/css/addons/datatables-select.css';
+@import '~mdbootstrap/css/addons/datatables.css';
+@import '~mdbootstrap/css/mdb.css';
 
 //Custom
 @import "font";
