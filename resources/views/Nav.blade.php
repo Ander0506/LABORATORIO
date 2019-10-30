@@ -8,11 +8,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
-           {{--@if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())--}}
+           @if ((\Illuminate\Support\Facades\Auth::guard('laboratorio')->check()) == '' && (\Illuminate\Support\Facades\Auth::guard('usuario')->check()) == '')
             <li class="nav-item {{setAction('home')}}">
                 <a class="nav-link nav-custom p-4" href="{{route('home')}}">Inicio</a>
             </li>
-           {{--@endif--}}
+
             <li class="nav-item {{setAction('about')}}">
                 <a class="nav-link nav-custom p-4" href="{{route('about')}}">Conócenos</a>
             </li>
@@ -22,7 +22,10 @@
             <li class="nav-item {{setAction('cantacto')}}">
                 <a class="nav-link nav-custom p-4" href="{{route('cantacto')}}">Contáctanos</a>
             </li>
-
+                <li class="nav-item {{setAction('guia')}}">
+                    <a class="nav-link nav-custom p-4" href="{{route('guia')}}">Guia</a>
+                </li>
+            @endif
             @if(\Illuminate\Support\Facades\Auth::guard('usuario')->check())
                 <li class="nav-item {{setAction('gestionusuario')}}">
                     <a class="nav-link nav-custom p-4" href="{{route('gestionusuario')}}">Gestion</a>
@@ -38,6 +41,12 @@
             @if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())
                 <li class="nav-item {{setAction('labanalisis')}}">
                     <a class="nav-link nav-custom p-4" href="{{route('labanalisis')}}">Analisis</a>
+                </li>
+            @endif
+
+            @if(\Illuminate\Support\Facades\Auth::guard('laboratorio')->check())
+                <li class="nav-item {{setAction('gestion')}}">
+                    <a class="nav-link nav-custom p-4" href="{{route('gestion',auth()->user()->LabCodigo)}}">Procesos</a>
                 </li>
             @endif
 
@@ -57,14 +66,24 @@
         <ul class="navbar-nav ml-auto nav-flex-icons">
 
             <li class="nav-item dropdown mr-4 dropdown-custom">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                     aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="{{route('login')}}"><i class="fas fa-user mr-3"></i>Iniciar sesión</a>
-                </div>
+                @if ((\Illuminate\Support\Facades\Auth::guard('laboratorio')->check()) == '' && (\Illuminate\Support\Facades\Auth::guard('usuario')->check()) == '')
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                         aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="{{route('login')}}"><i class="fas fa-user mr-3"></i>Iniciar sesión</a>
+                    </div>
+                @endif
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                         aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href=""><i class="fas fa-user mr-3"></i>Cerrar Sesion</a>
+                    </div>
             </li>
         </ul>
     </div>

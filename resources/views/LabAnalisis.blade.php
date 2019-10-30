@@ -43,14 +43,13 @@
                 </div>
             </div>
         </div>
-
-        <div class="text-center">
-            <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Agregar Nuevo Analisis</a>
-        </div>
     </div>
         <!-- Editable table -->
-        <div class="card col-sm-8 " style="margin-left: 15%;">
+        <div class="card col-sm-8 " style="margin-left: 15%; margin-top: 3%;">
             <h3 class="card-header text-center font-weight-bold text-uppercase py-4">LISTADO DE ANALISIS</h3>
+            <div class="text-center" style="float: right !important; margin-top: -7%;">
+                <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm" style="float: right !important;">Agregar Nuevo Analisis</a>
+            </div>
             <div class="card-body">
                 <div id="table" class="table-editable">
                     @if ($laboratorioanalisis->isEmpty())
@@ -62,14 +61,14 @@
                             </CENTER>
                         </DIV>
                     @else
-                        <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <table id="TableLab" class="table table-bordered table-responsive-md table-striped text-center">
                             <thead>
                             <tr>
-                                <th class="text-center">Analisis</th>
-                                <th class="text-center">Valor</th>
-                                <th class="text-center">Aprobado</th>
-                                <th class="text-center">Disponibilidad</th>
-                                <th class="text-center">Actualizar</th>
+                                <th class="text-center th-sm">Analisis</th>
+                                <th class="text-center th-sm">Valor</th>
+                                <th class="text-center th-sm">Aprobado</th>
+                                <th class="text-center th-sm">Disponibilidad</th>
+                                <th class="text-center th-sm">Actualizar</th>
                             </tr>
                             </thead>
                             <tbody>
