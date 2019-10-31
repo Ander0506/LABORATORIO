@@ -66,26 +66,24 @@
         <ul class="navbar-nav ml-auto nav-flex-icons">
 
             <li class="nav-item dropdown mr-4 dropdown-custom">
-                @if ((\Illuminate\Support\Facades\Auth::guard('laboratorio')->check()) == '' && (\Illuminate\Support\Facades\Auth::guard('usuario')->check()) == '')
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                          aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="{{route('login')}}"><i class="fas fa-user mr-3"></i>Iniciar sesión</a>
-                    </div>
-                @endif
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                         aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href=""><i class="fas fa-user mr-3"></i>Cerrar Sesion</a>
+                        @guest
+                            <a class="dropdown-item" href="{{route('login')}}"><i class="fas fa-user mr-3"></i>Iniciar sesión</a>
+                        @else
+                            <a class="dropdown-item" href="#" onclick="logout()"><i class="fas fa-sign-out-alt mr-3"></i>Cerrar Sesion</a>
+                        @endguest
                     </div>
             </li>
         </ul>
     </div>
 </nav>
+
+<form id="logout-form"  action="{{route('logout')}}" method="POST" class="d-none">
+    @csrf
+</form>
 

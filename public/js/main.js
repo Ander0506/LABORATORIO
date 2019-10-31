@@ -1,15 +1,5 @@
-var posStep = $('ul.stepper-vertical li.warning').index();
+// var posStep = $('ul.stepper-vertical li.warning').index();
 
-
-if (posStep == 2) {
-    var anim = l({
-        container: ('proceso'), // Required
-        path: '/lottie/Analisis_Aprobado.json', // Required
-        renderer: 'svg', // Required
-        loop: false, // Optional
-        autoplay: true, // Optional
-    });
-}
     // switch(pos) {
     //     case 0:
     //         return '/lottie/Espera_Confirmacion.json';
@@ -43,3 +33,8 @@ $(document).ready(function () {
     $('#TableLab').DataTable();
     $('.dataTables_length').addClass('bs-select');
 });
+
+function logout() {
+    event.preventDefault();
+    $('#logout-form').submit();
+}

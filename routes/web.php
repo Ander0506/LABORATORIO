@@ -34,6 +34,7 @@ Route::post('/labanalisis','LabAnalisisController@insert')->name('labanalisis');
 Route::post('/labanalisis/{key}','LabAnalisisController@update')->name('labanalisisupdate');
 Route::post('/contratar','ContratarController@index')->name('contratar');
 Route::post('/contratar/analisis','ContratarController@crear')->name('solicitaranalisis');
+Route::post('logout','LogoutController@logout')->name('logout');
 /*
 Route::get('/', function () {
     return view('welcome');

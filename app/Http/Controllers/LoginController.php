@@ -15,6 +15,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $redirectTo = '/';
 
     public function __construct()
     {
