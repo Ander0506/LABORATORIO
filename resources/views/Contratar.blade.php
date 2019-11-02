@@ -3,16 +3,17 @@
 @section('content')
 <div class="col-lg-12">
     <div class="row ">
-        <form method="POST" action="{{route('contratar')}}" enctype="multipart/form-data" >
+        <form class="col-12 mt-4" method="POST" action="{{route('contratar')}}" enctype="multipart/form-data" >
             @csrf
-            <div class="col-lg-12 col-sm-12">
+            <div class="offset-1 col-lg-3 col-sm-3 d-inline-block">
+                <label for="">Análisis</label>
                 <select class="browser-default custom-select" name="AnaCodigo">
                     @foreach($analisis as $analisi)
                         <option value={!! $analisi -> AnaCodigo !!}>{!! $analisi -> AnaDescripcion !!}</option>
                     @endforeach
                 </select>
             </div>
-            <div class="col-lg-12 col-sm-12">
+            <div class="col-lg-5 col-sm-5 d-inline-block">
                 <button class="btn btn-default">Buscar</button>
             </div>
         </form>
@@ -20,7 +21,7 @@
     <br>
     <div class="row ">
         @if ($laboratorioanalisis -> isEmpty())
-            <DIV CLASS="justify-content-center">
+            <DIV CLASS="justify-content-center offset-1 col-10">
                 <CENTER>
                     <div class="alert alert-info col-sm-12 " role="alert">
                         <CENTER><STRONG>SELECIONE UN ANALISIS Y PRESIONE BUSCAR</STRONG></CENTER>
@@ -32,14 +33,26 @@
                 <div class="col-lg-3 col-sm-12">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h4 class="card-title" style="text-transform: uppercase">{!! $laboratorioanalisi -> LabNombre !!}</h4>
-                            <p class="card-text">Direccion: {!! $laboratorioanalisi -> LabDireccion !!}</p>
-                            <p class="card-text">Telefono: {!! $laboratorioanalisi -> LabTelefono !!}</p>
-                            <p class="card-text">Email: {!! $laboratorioanalisi -> LabEmail !!}</p>
-                            <a class="btn btn-success btn-sm">$ {!! $laboratorioanalisi -> AnaLabPrecio !!} COP</a>
+                            <h4 class="card-title" style="text-transform: uppercase">{{ $laboratorioanalisi -> LabNombre }}</h4>
+                            <div class="row text-left mt-4">
+                                <p class="card-text col-5">Direccion: </p>
+                                <p class="card-text p-0 col-7">{{$laboratorioanalisi -> LabDireccion}} </p>
+                            </div>
+                            <div class="row text-left">
+                                <p class="card-text col-5">Telefono: </p>
+                                <p class="card-text p-0 col-7">{{$laboratorioanalisi -> LabTelefono}}</p>
+                            </div>
+                            <div class="row text-left">
+                                <p class="card-text col-5">Email: </p>
+                                <p class="card-text p-0 col-7">{{$laboratorioanalisi -> LabEmail}}</p>
+                            </div>
+                            <div class="row text-left">
+                                <p class="card-text col-5 font-weight-bold">Precio: </p>
+                                <p class="card-text p-0 col-7 font-weight-bold">$ {{$laboratorioanalisi -> AnaLabPrecio}} COP</p>
+                            </div>
                         </div>
                         <div class="card-footer text-muted success-color white-text">
-                            <p class="mb-0"><a href="" class="" data-toggle="modal" data-target="{{'#modalLoginForm'.$laboratorioanalisi -> LabCodigo}}">SOLICITAR</a></p>
+                            <p class="mb-0"><a href="" class="text-white" data-toggle="modal" data-target="{{'#modalLoginForm'.$laboratorioanalisi -> LabCodigo}}">SOLICITAR</a></p>
                             <div class="modal fade" id="{{'modalLoginForm'.$laboratorioanalisi -> LabCodigo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                                  aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -61,7 +74,7 @@
                                                     <!-- Material input -->
                                                     <div class="md-form">
                                                         <input type="text" id="form1" class="form-control" VALUE="{!! $laboratorioanalisi -> LabNombre !!}" name="LabNombre" disabled>
-                                                        <label for="form1">LABORATORIO</label>
+                                                        <label for="form1">Laboratorio</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -73,16 +86,15 @@
                                                     <!-- Material input -->
                                                     <div class="md-form">
                                                         <input type="text" id="form2" class="form-control" VALUE="{!! $laboratorioanalisi -> AnaDescripcion !!}" name="AnaDescripcion" disabled>
-                                                        <label for="form1">ANALISIS</label>
+                                                        <label for="form2">Análisis</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-body mx-3">
                                                 <div class="input-group">
                                                     <!-- Material input -->
-                                                    <div class="md-form">
-                                                        <input type="datetime-local" id="form3" class="form-control" name="FechaRecogida">
-                                                        <label for="form1">FECHA Y HORA DE RECOGIDA</label>
+                                                    <div class="md-form form-group">
+                                                        <input type="datetime-local" id="horfech" class="form-control" name="FechaRecogida">
                                                     </div>
                                                 </div>
                                             </div>

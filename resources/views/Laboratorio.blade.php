@@ -60,7 +60,9 @@
 
                         <!--Card image-->
                         <div class="view view-cascade">
-                            <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="card-img-top">
+                            <div class="content-img m-2 overflow-hidden d-grid justify-content-center">
+                                <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="card-img-top">
+                            </div>
                             {{--<img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">--}}
                             {{--<img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">--}}
 
@@ -73,7 +75,7 @@
                         <!--Card content-->
                         <div class="card-body card-body-cascade text-center">
                             <!--Title-->
-                            <h4 class="card-title"><strong>{!! $laboratorio -> LabNombre !!}</strong></h4>
+                            <h4 class="card-title">{{$laboratorio -> LabNombre }}</h4>
 
                             <p class="card-text">{!! $laboratorio -> LabDesc !!}</p>
 

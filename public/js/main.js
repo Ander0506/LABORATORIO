@@ -38,3 +38,13 @@ function logout() {
     event.preventDefault();
     $('#logout-form').submit();
 }
+
+function ll(){
+    lottie.loadAnimation({
+        container: 'proceso', // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'Analisis_Aprobado.json' // the path to the animation json
+    });
+}

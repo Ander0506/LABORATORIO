@@ -3,7 +3,7 @@
 @section('content')
     <div class="justify-content-center col-sm-12">
         <!-- Editable table -->
-        <div class="card col-sm-8 " style="margin-left: 15%; margin-top: 3%;">
+        <div class="card col-sm-10 p-0" style="margin-left: 15%; margin-top: 3%;">
             <h3 class="card-header text-center font-weight-bold text-uppercase py-4">ESTADO DE ANALISIS</h3>
             <div class="card-body">
                 <div id="table" class="table-editable">

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="@yield('Style')">
     <title>@yield('title', 'CERTILABS')</title>
 </head>
-<body>
+<body class="scrollbar-primary">
     @include('Nav')
     @yield('content')
 

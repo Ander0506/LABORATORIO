@@ -1,14 +1,6 @@
 bsCustomFileInput = require('mdbootstrap/js/modules/bs-custom-file-input');
 lottie = require('lottie-web/build/player/lottie');
 
-lottie.loadAnimation({
-    container: 'proceso', // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: 'lottie/Analisis_Aprobado.json' // the path to the animation json
-});
-
 window._ = require('lodash');
 window.Popper = require('mdbootstrap/js/popper.min').default;
 

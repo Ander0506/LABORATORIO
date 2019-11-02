@@ -12,10 +12,12 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-body mx-3">
-                                <div class="md-form mb-5">
-                                    <input type="text" id="form3" class="form-control validate" NAME="Guia">
-                                    <label data-error="wrong" data-success="right" for="form3">NUMERO DE GUIA</label>
+                                <div class="md-form form-group my-5">
+                                    <!-- Password -->
+                                    <input id="Guia" type="text" name="Guia" class="form-control mb-4" required>
+                                    <label for="Guia">Número de Guía</label>
                                 </div>
+                               
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
                                 <button class="btn btn-indigo" type="submit">Verificar <i class="fas fa-paper-plane-o ml-1"></i></button>

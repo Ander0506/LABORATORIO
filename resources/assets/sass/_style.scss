@@ -30,8 +30,10 @@ html *{
 .d-grid{
   display: grid !important;
 }
+
 .card-img-top{
-    padding: 10px;
+  height: 200px;
+  width: auto;
 }
 
 .form-group.has-error .help-block{
@@ -55,4 +57,54 @@ html *{
 
 #proceso {
     height: 250px;
+}
+
+.card-title{
+  position: relative;
+}
+
+.card-title:before {
+  content: "";
+  position: absolute;
+  background-color: #6dccf0;
+  width: 70%;
+  height: 2px;
+  left: 15%;
+  bottom: -5px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #64cdee47;
+}
+
+.Icon-Light-Gray{
+  color: #8e8e8e;
+}
+
+.dataTables_length.bs-select{
+  display: inline-block;
+  width: 50%;
+}
+
+.dataTables_filter{
+  display: inline-block;
+  width: 50%;
+  text-align: end;
+}
+
+.dataTables_info{
+  display: inline-block;
+  width: 60%;
+}
+
+.dataTables_paginate.paging_simple_numbers{
+  display: inline-block;
+  width: 40%;
 }
