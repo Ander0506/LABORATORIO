@@ -30,7 +30,7 @@ class RegistroLabController extends Controller
             'LabCertificacion' => $request->get('LabCertificacion')
         ));
         $laboratorio->save();
-        return 'Datos guardados';
+        return view('home');
     }
 
     public function login(Request $request)

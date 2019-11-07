@@ -40,12 +40,13 @@
 			$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
 			$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
 			$this->form[] = ['label'=>'AnaCertificacion','name'=>'AnaCertificacion','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'0;1'];
+			$this->form[] = ['label'=>'AnaLabAprobado','name'=>'AnaLabAprobado','validation'=>'required','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'LabCodigo','name'=>'LabCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'laboratorio,LabNombre'];
-			//$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaCodigo'];
+			//$this->form[] = ['label'=>'AnaCodigo','name'=>'AnaCodigo','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'analisis,AnaDescripcion'];
 			//$this->form[] = ['label'=>'AnaCertificacion','name'=>'AnaCertificacion','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'0;1'];
 			# OLD END FORM
 

@@ -94,7 +94,10 @@
                                                 <div class="input-group">
                                                     <!-- Material input -->
                                                     <div class="md-form form-group">
-                                                        <input type="datetime-local" id="horfech" class="form-control" name="FechaRecogida">
+                                                        <input type="text" id="form8" class="form-control" name="DirRecogida" required>
+                                                        <input type="datetime-local" id="form9" class="form-control" name="FechaRecogida" required>
+
+                                                        <label for="form8">Direccion y fecha de recogida</label>
                                                     </div>
                                                 </div>
                                             </div>

@@ -31,9 +31,9 @@
                                         <div class="row">
                                             <div class="col-sm-6 col-sm-offset-1">
                                                 <div class="picture-container">
-                                                    <div class="picture">
+                                                    <div class="form-group picture">
                                                         <img src="assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                        <input id="wizard-picture" name="LabImg" type="file">
+                                                        <input id="wizard-picture" name="LabImg" type="file" class="form-control" required>
                                                     </div>
                                                     <h6>Selecione una imagen</h6>
                                                 </div>
@@ -52,7 +52,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-sm-offset-1">
+                                            <div class="col-sm-12 col-sm-offset-1">
                                                 <div class="">
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Descripcion <small>(Requerido)</small></label>
@@ -62,16 +62,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <div class="">
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Certificaciones <small>(Requerido)</small></label>
-                                                        <textarea name="LabCertificacion"  class="form-control" required>
 
-                                                        </textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="account">

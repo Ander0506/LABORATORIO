@@ -24,7 +24,7 @@ class LabAnalisisController extends Controller
             -> join('analisis','laboratorioanalisis.AnaCodigo','=','analisis.AnaCodigo')
             -> select('laboratorioanalisis.*','analisis.AnaDescripcion')
             -> where('laboratorioanalisis.LabCodigo', '=', auth()->user()->LabCodigo)
-            -> where('laboratorioanalisis.AnaLabAprobado', '=', 'SI')
+            //-> where('laboratorioanalisis.AnaLabAprobado', '=', 'SI')
             ->get();
 
         $analisis = Analisis::all();

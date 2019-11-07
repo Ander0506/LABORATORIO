@@ -3,7 +3,7 @@
 @section('content')
     <div class="justify-content-center col-sm-12">
         <!-- Editable table -->
-        <div class="card col-sm-10 p-0" style="margin-left: 15%; margin-top: 3%;">
+        <div class="card col-sm-10 p-0" style="margin-left: 9%; margin-top: 3%;">
             <h3 class="card-header text-center font-weight-bold text-uppercase py-4">ESTADO DE ANALISIS</h3>
             <div class="card-body">
                 <div id="table" class="table-editable">
@@ -77,7 +77,7 @@
                                                                 <span class="input-group-text" id="inputGroupFileAddon01">Anexar</span>
                                                             </div>
                                                             <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01" required>
+                                                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Resultado"  aria-describedby="inputGroupFileAddon01">
                                                                 <label class="custom-file-label" for="inputGroupFile01">Resultado</label>
                                                             </div>
                                                         </div>

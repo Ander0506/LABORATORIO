@@ -27,7 +27,7 @@ class RegistroPublicoController extends Controller
             'password' => Hash::make($request->get('password'))
         ));
         $usuario->save();
-        return 'Datos guardados';
+        return view('home');
     }
 
     public function login(Request $request)
