@@ -42,6 +42,7 @@ class ContratarController extends Controller
             'LabCodigo' => $request->get('LabCodigo'),
             'AnaCodigo' => $request->get('AnaCodigo2'),
             'Estado' => 1,
+            'DirRecogida'  => $request->get('DirRecogida') ,
             'FechaRecogida' => $request->get('FechaRecogida') ,
             'Guia' => auth()->user()->UsuCodigo.$request->get('LabCodigo').$request->get('AnaCodigo2').date("d").date("m").date("Y"),
             'MetodoPago' => $request->get('MetodoPago')

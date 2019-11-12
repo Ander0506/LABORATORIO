@@ -45,7 +45,7 @@
                                            Muestra Entregada
                                         @endif
                                         @if($usuariolaboratorio -> Estado == 5)
-                                           Muestra Entregada
+                                           En Proceso
                                         @endif
                                         @if($usuariolaboratorio -> Estado == 6)
                                            Analisis Fianlizado
