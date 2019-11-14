@@ -29,6 +29,10 @@
                                 <label data-error="wrong" data-success="right" for="defaultForm-email">Valor</label>
                             </div>
                             <div class="md-form mb-5">
+                                <input type="text" id="defaultForm-Tiempo" class="form-control validate" name="AnaLabTiempo">
+                                <label data-error="wrong" data-success="right" for="defaultForm-email">Tiempo de Entrega</label>
+                            </div>
+                            <div class="md-form mb-5">
                                 <spam>¿Disponible?</spam>
                                 <select class="browser-default custom-select" name="AnaLabDisponible">
                                         <option value='SI'>SI</option>
@@ -95,6 +99,10 @@
                                                         <div class="md-form mb-5">
                                                             <input type="int" class="form-control validate" name="AnaLabPrecio2">
                                                             <label data-error="wrong" data-success="right" >Valor</label>
+                                                        </div>
+                                                        <div class="md-form mb-5">
+                                                            <input type="text" class="form-control validate" name="AnaLabTiempo2">
+                                                            <label data-error="wrong" data-success="right" >Tiempo de Entrega</label>
                                                         </div>
                                                         <div class="md-form mb-5">
                                                             <spam>¿Disponible?</spam>

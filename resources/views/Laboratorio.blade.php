@@ -61,7 +61,9 @@
                         <!--Card image-->
                         <div class="view view-cascade">
                             <div class="content-img m-2 overflow-hidden d-grid justify-content-center">
-                                <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="card-img-top">
+{{--                                <img src="{{asset('Images/Fondo_inicio.jpg')}}" class="card-img-top">--}}
+
+                                <img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">
                             </div>
                             {{--<img src="{{asset($laboratorio->LabImg)}}" class="card-img-top">--}}
                             {{--<img src="data:image/jpeg;base64,{{base64_encode($laboratorio->LabImg)}}" class="card-img-top">--}}

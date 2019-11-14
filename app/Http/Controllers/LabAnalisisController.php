@@ -39,6 +39,7 @@ class LabAnalisisController extends Controller
             'LabCodigo' => (auth()->user()->LabCodigo),
             'AnaCodigo' => $request->get('AnaCodigo'),
             'AnaLabPrecio' => $request->get('AnaLabPrecio'),
+            'AnaLabTiempo' => $request->get('AnaLabTiempo'),
             'AnaLabAprobado' => ('NO'),
             'AnaLabDisponible' => $request->get('AnaLabDisponible')
         ));
@@ -53,7 +54,9 @@ class LabAnalisisController extends Controller
         DB::table('laboratorioanalisis')
             ->where('LanAnaCodigo', $key)
             ->update(['AnaLabDisponible' => $request->get('AnaLabDisponible2')]);
-
+        DB::table('laboratorioanalisis')
+            ->where('LanAnaCodigo', $key)
+            ->update(['AnaLabTiempo' => $request->get('AnaLabTiempo2')]);
         return redirect('labanalisis');
     }
 
