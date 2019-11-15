@@ -47,6 +47,10 @@
                                 <p class="card-text p-0 col-7">{{$laboratorioanalisi -> LabEmail}}</p>
                             </div>
                             <div class="row text-left">
+                                <p class="card-text col-5">Tiempo de entrega: </p>
+                                <p class="card-text p-0 col-7">{{$laboratorioanalisi -> AnaLabTiempo}} Dias</p>
+                            </div>
+                            <div class="row text-left">
                                 <p class="card-text col-5 font-weight-bold">Precio: </p>
                                 <p class="card-text p-0 col-7 font-weight-bold">$ {{$laboratorioanalisi -> AnaLabPrecio}} COP</p>
                             </div>

@@ -70,7 +70,7 @@
                             <tr>
                                 <th class="text-center th-sm">Analisis</th>
                                 <th class="text-center th-sm">Valor</th>
-
+                                <th class="text-center th-sm">Tiempo</th>
                                 <th class="text-center th-sm">Disponibilidad</th>
                                 <th class="text-center th-sm">Actualizar</th>
                             </tr>
@@ -80,6 +80,7 @@
                                 <tr>
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaDescripcion !!}</td>
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabPrecio !!}</td>
+                                    <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabTiempo !!} Dias</td>
 
                                     <td class="pt-3-half" contenteditable="true">{!! $laboratorioanalisi -> AnaLabDisponible !!}</td>
                                     <td><a href="" class="" data-toggle="modal" data-target="{{'#modalupdate'.$laboratorioanalisi -> LanAnaCodigo}}">Click</a></td>
