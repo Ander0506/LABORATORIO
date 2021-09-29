@@ -20,7 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "datatables.net": "^1.10.20",
+        "datatables.net": "^1.11.3",
         "lottie-web": "^5.5.9",
         "mdbootstrap": "^4.8.10"
     }
